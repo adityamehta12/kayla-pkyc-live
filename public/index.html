@@ -4717,7 +4717,7 @@ async function step1_classification() {
     };
 
     const resultHtml = ev.fired
-      ? '<span class="event-detail-tag" style="' + (matColors[r.materiality] || matColors.LOW) + '">FIRED &mdash; ' + r.materiality + '</span>'
+      ? '<span class="event-detail-tag" style="' + (matColors[r.materiality] || matColors.LOW) + '">TRIGGERED &mdash; ' + r.materiality + '</span>'
       : '<span style="color:#a0aec0;font-size:11px;">NOT TRIGGERED</span>';
 
     const tr = document.createElement('tr');
@@ -4737,13 +4737,13 @@ async function step1_classification() {
   }
 
   // Update badge and summary
-  document.getElementById('step3-rules-badge').textContent = firedCount + '/' + enabledCount + ' rules fired';
+  document.getElementById('step3-rules-badge').textContent = firedCount + '/' + enabledCount + ' rules triggered';
   const sevColor = highestSeverity === 'CRITICAL' ? '#e53e3e' : (highestSeverity === 'HIGH' ? '#d69e2e' : '#38a169');
   document.getElementById('step3-rules-summary').innerHTML =
-    '<span><strong>Rules Fired:</strong> ' + firedCount + '/' + enabledCount + ' &nbsp;&boxv;&nbsp; <strong>Severity:</strong> <span style="color:' + sevColor + '; font-weight:700;">' + highestSeverity + '</span> &nbsp;&boxv;&nbsp; <strong>Workflow:</strong> Full Re-KYC</span>' +
+    '<span><strong>Rules Triggered:</strong> ' + firedCount + '/' + enabledCount + ' &nbsp;&boxv;&nbsp; <strong>Severity:</strong> <span style="color:' + sevColor + '; font-weight:700;">' + highestSeverity + '</span> &nbsp;&boxv;&nbsp; <strong>Workflow:</strong> Full Re-KYC</span>' +
     '<span>Rendered from Kayla Monitoring Configuration &bull; <a href="#" onclick="showKaylaConfig(); switchConfigSection(\'rules\',document.querySelectorAll(\'.config-sidebar-item\')[2]); return false;" style="color:#2b6cb0;">Edit rules &rarr;</a></span>';
 
-  addCLMAction('Rules fired: ' + firedCount + '/' + enabledCount + ' | Severity: ' + highestSeverity + ' | SLA: 30 days');
+  addCLMAction('Rules triggered: ' + firedCount + '/' + enabledCount + ' | Severity: ' + highestSeverity + ' | SLA: 30 days');
   $('#clm-sla').textContent = '30 days (28 left)';
   await sleep(1000);
   completeStep(1);
