@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delaware Division of Corporations - Entity Search</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f4;
+            color: #333;
+        }
+        .header {
+            background: #003b5c;
+            color: white;
+            padding: 1rem 2rem;
+            border-bottom: 4px solid #00558c;
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .seal {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #003b5c;
+            font-size: 0.75rem;
+            text-align: center;
+            padding: 0.5rem;
+            line-height: 1.2;
+        }
+        .header-text h1 {
+            font-size: 1.75rem;
+            margin-bottom: 0.25rem;
+        }
+        .header-text p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .breadcrumb {
+            background: #e8f4f8;
+            padding: 0.75rem 2rem;
+            font-size: 0.85rem;
+            border-bottom: 1px solid #ccc;
+        }
+        .breadcrumb a {
+            color: #00558c;
+            text-decoration: none;
+        }
+        .content {
+            padding: 2rem;
+        }
+        .page-title {
+            font-size: 2rem;
+            color: #003b5c;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #00558c;
+        }
+        .info-card {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .info-card h3 {
+            font-size: 1.25rem;
+            color: #003b5c;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #00558c;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+        }
+        .info-row {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 1rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .info-label {
+            font-weight: 600;
+            color: #555;
+        }
+        .info-value {
+            color: #333;
+        }
+        .status-active {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: #d4edda;
+            color: #155724;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        th {
+            background: #003b5c;
+            color: white;
+            padding: 0.75rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            padding: 0.75rem;
+            border-bottom: 1px solid #ddd;
+        }
+        tr:hover {
+            background: #f5f5f5;
+        }
+        .footer {
+            background: #f4f4f4;
+            padding: 1.5rem 2rem;
+            border-top: 1px solid #ddd;
+            font-size: 0.85rem;
+            text-align: center;
+            color: #666;
+        }
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="seal">
+                State of<br>Delaware
+            </div>
+            <div class="header-text">
+                <h1>Delaware Division of Corporations</h1>
+                <p>Secretary of State - Business Entity Search</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="#">Home</a> &gt; <a href="#">Entity Search</a> &gt; <a href="#">Search Results</a> &gt; WorkFusion, Inc.
+        </div>
+
+        <div class="content">
+            <h1 class="page-title">Entity Information - WorkFusion, Inc.</h1>
+
+            <div class="info-card">
+                <h3>General Information</h3>
+                <div class="info-grid">
+                    <div class="info-row">
+                        <div class="info-label">Entity Name</div>
+                        <div class="info-value"><strong>WorkFusion, Inc.</strong></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">File Number</div>
+                        <div class="info-value">5234567</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Entity Type</div>
+                        <div class="info-value">Stock Corporation</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Entity Status</div>
+                        <div class="info-value"><span class="status-active">ACTIVE - GOOD STANDING</span></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Date of Incorporation</div>
+                        <div class="info-value">March 15, 2010</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">State/Country</div>
+                        <div class="info-value">Delaware, United States</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Registered Agent</div>
+                        <div class="info-value">Corporation Service Company</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Registered Address</div>
+                        <div class="info-value">251 Little Falls Drive, Wilmington, DE 19808</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3>Officers and Directors</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Title</th>
+                            <th>Date Appointed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Adam Famularo</td>
+                            <td>Chief Executive Officer, Director</td>
+                            <td>June 2018</td>
+                        </tr>
+                        <tr>
+                            <td>Richard Campbell</td>
+                            <td>Chief Financial Officer</td>
+                            <td>January 2019</td>
+                        </tr>
+                        <tr>
+                            <td>Max Yankelevich</td>
+                            <td>Director (Co-Founder)</td>
+                            <td>March 2010</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="info-card">
+                <h3>Ownership Information</h3>
+                <div class="note">
+                    <strong>Note:</strong> Detailed ownership information for Delaware corporations is maintained through annual reports and beneficial ownership filings. The following represents major shareholders as disclosed in the most recent annual report.
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Shareholder Name</th>
+                            <th>Type</th>
+                            <th>Ownership Percentage</th>
+                            <th>Last Verified</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Georgian Partners</td>
+                            <td>Institutional Investor</td>
+                            <td>28.0%</td>
+                            <td>January 2025</td>
+                        </tr>
+                        <tr>
+                            <td>Insight Partners</td>
+                            <td>Institutional Investor</td>
+                            <td>26.0%</td>
+                            <td>January 2025</td>
+                        </tr>
+                        <tr>
+                            <td>Serengeti Asset Management</td>
+                            <td>Institutional Investor</td>
+                            <td>20.0%</td>
+                            <td>January 2025</td>
+                        </tr>
+                        <tr>
+                            <td>Management & Employees</td>
+                            <td>Common Stock/Options</td>
+                            <td>16.0%</td>
+                            <td>January 2025</td>
+                        </tr>
+                        <tr>
+                            <td>Other Investors</td>
+                            <td>Various</td>
+                            <td>10.0%</td>
+                            <td>January 2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="info-card">
+                <h3>Annual Report & Filing History</h3>
+                <div class="info-grid">
+                    <div class="info-row">
+                        <div class="info-label">Last Annual Report</div>
+                        <div class="info-value">January 15, 2025</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Franchise Tax Status</div>
+                        <div class="info-value"><span class="status-active">PAID - CURRENT</span></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Last Document Filed</div>
+                        <div class="info-value">Annual Report - January 15, 2025</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <strong>Delaware Division of Corporations</strong><br>
+            John G. Townsend Building, 401 Federal Street, Suite 4, Dover, DE 19901<br>
+            Phone: (302) 739-3073 | Fax: (302) 739-3812<br>
+            <em>This is an official record from the State of Delaware</em>
+        </div>
+    </div>
+</body>
+</html>

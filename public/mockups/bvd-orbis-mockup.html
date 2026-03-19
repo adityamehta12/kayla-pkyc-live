@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbis - WorkFusion, Inc. | Bureau van Dijk</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f8f8;
+            color: #333;
+        }
+        .header {
+            background: #1a1a1a;
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        .logo-sub {
+            font-size: 0.75rem;
+            font-weight: 400;
+            opacity: 0.8;
+            margin-top: 0.25rem;
+        }
+        .nav {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.9rem;
+        }
+        .nav a {
+            color: #ccc;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+        .sidebar {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            height: fit-content;
+        }
+        .sidebar h3 {
+            font-size: 1rem;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        .sidebar-item {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.85rem;
+        }
+        .sidebar-label {
+            font-weight: 600;
+            color: #666;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .company-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 3px solid #1a1a1a;
+        }
+        .company-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+        .company-subtitle {
+            font-size: 1rem;
+            color: #666;
+        }
+        .status-badge {
+            padding: 0.5rem 1rem;
+            background: #d4edda;
+            color: #155724;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+        .section {
+            margin-bottom: 2.5rem;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        .info-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .info-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+        .info-value {
+            font-size: 1rem;
+            color: #333;
+            font-weight: 500;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        th {
+            background: #f5f5f5;
+            padding: 0.75rem;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #ddd;
+            font-size: 0.875rem;
+        }
+        td {
+            padding: 0.75rem;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 0.9rem;
+        }
+        tr:hover {
+            background: #fafafa;
+        }
+        .highlight {
+            background: #fff9e6 !important;
+        }
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            margin-top: 3rem;
+        }
+        .data-source {
+            background: #e3f2fd;
+            border-left: 4px solid #1976d2;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div>
+                <div class="logo">ORBIS</div>
+                <div class="logo-sub">Bureau van Dijk - A Moody's Analytics Company</div>
+            </div>
+            <div class="nav">
+                <a href="#">Search</a>
+                <a href="#">Reports</a>
+                <a href="#">Lists</a>
+                <a href="#">Help</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <h3>Quick Facts</h3>
+            <div class="sidebar-item">
+                <span class="sidebar-label">BvD ID Number</span>
+                US-WF-001234567
+            </div>
+            <div class="sidebar-item">
+                <span class="sidebar-label">Industry (NAICS)</span>
+                511210 - Software Publishers
+            </div>
+            <div class="sidebar-item">
+                <span class="sidebar-label">Employees</span>
+                200-500
+            </div>
+            <div class="sidebar-item">
+                <span class="sidebar-label">Operating Revenue</span>
+                $50M - $100M (est.)
+            </div>
+            <div class="sidebar-item">
+                <span class="sidebar-label">Last Update</span>
+                January 2025
+            </div>
+            <div class="sidebar-item">
+                <span class="sidebar-label">Data Confidence</span>
+                <strong style="color: #155724;">High</strong>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="company-header">
+                <div>
+                    <div class="company-name">WorkFusion, Inc.</div>
+                    <div class="company-subtitle">AI-Powered Intelligent Automation Platform</div>
+                </div>
+                <div class="status-badge">ACTIVE</div>
+            </div>
+
+            <div class="data-source">
+                <strong>Data Sources:</strong> SEC Filings, Commercial Registries, Financial Statements, News & Media, Third-party Data Providers<br>
+                <strong>Last Verified:</strong> January 15, 2025
+            </div>
+
+            <div class="section">
+                <div class="section-title">Company Overview</div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Legal Name</div>
+                        <div class="info-value">WorkFusion, Inc.</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Country of Incorporation</div>
+                        <div class="info-value">United States</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">State</div>
+                        <div class="info-value">Delaware</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Year Incorporated</div>
+                        <div class="info-value">2010</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Registered Address</div>
+                        <div class="info-value">48 Wall Street, 7th Floor<br>New York, NY 10005</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Company Type</div>
+                        <div class="info-value">Private Corporation</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Shareholders & Ownership Structure</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Shareholder Name</th>
+                            <th>Type</th>
+                            <th>Direct Ownership %</th>
+                            <th>Source</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Georgian Partners</strong></td>
+                            <td>Venture Capital / PE</td>
+                            <td><strong>28.0%</strong></td>
+                            <td>SEC Form D, Company Filings</td>
+                            <td>Jan 2025</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Insight Partners</strong></td>
+                            <td>Venture Capital / PE</td>
+                            <td><strong>26.0%</strong></td>
+                            <td>SEC Form D, Company Filings</td>
+                            <td>Jan 2025</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Serengeti Asset Management</strong></td>
+                            <td>Private Equity</td>
+                            <td><strong>20.0%</strong></td>
+                            <td>SEC Form D, Company Filings</td>
+                            <td>Jan 2025</td>
+                        </tr>
+                        <tr>
+                            <td>Management & Employee Stockholders</td>
+                            <td>Individual / ESOP</td>
+                            <td>16.0%</td>
+                            <td>Company Disclosure</td>
+                            <td>Jan 2025</td>
+                        </tr>
+                        <tr>
+                            <td>Other Investors</td>
+                            <td>Various</td>
+                            <td>10.0%</td>
+                            <td>Company Disclosure</td>
+                            <td>Jan 2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Management & Directors</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Since</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Adam Famularo</td>
+                            <td>Chief Executive Officer</td>
+                            <td>2018</td>
+                        </tr>
+                        <tr>
+                            <td>Richard Campbell</td>
+                            <td>Chief Financial Officer</td>
+                            <td>2019</td>
+                        </tr>
+                        <tr>
+                            <td>Max Yankelevich</td>
+                            <td>Co-Founder, Director</td>
+                            <td>2010</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Funding History</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Round</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Lead Investors</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="highlight">
+                            <td><strong>Series E</strong></td>
+                            <td>Jan 2024</td>
+                            <td>$35M</td>
+                            <td>Georgian Partners</td>
+                        </tr>
+                        <tr>
+                            <td>Series D</td>
+                            <td>Sep 2022</td>
+                            <td>$50M</td>
+                            <td>Insight Partners</td>
+                        </tr>
+                        <tr>
+                            <td>Series C</td>
+                            <td>Mar 2020</td>
+                            <td>$25M</td>
+                            <td>Georgian Partners</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <strong>Bureau van Dijk - A Moody's Analytics Company</strong><br>
+        Orbis provides comprehensive company information from official registers and reliable sources worldwide<br>
+        © 2025 Bureau van Dijk Electronic Publishing. All rights reserved.
+    </div>
+</body>
+</html>

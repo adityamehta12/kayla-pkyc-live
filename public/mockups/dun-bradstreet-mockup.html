@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&B Business Information Report - WorkFusion, Inc.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: #f7f7f7;
+            color: #333;
+        }
+        .header {
+            background: #d52b1e;
+            color: white;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .duns-number {
+            font-size: 1.25rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            background: white;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .report-header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%);
+            color: white;
+            padding: 2rem;
+            border-bottom: 4px solid #d52b1e;
+        }
+        .report-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .report-subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        .report-meta {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .meta-box {
+            background: rgba(255,255,255,0.1);
+            padding: 0.75rem;
+            border-radius: 4px;
+        }
+        .meta-label {
+            font-size: 0.75rem;
+            opacity: 0.8;
+            margin-bottom: 0.25rem;
+        }
+        .meta-value {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .content {
+            padding: 2rem;
+        }
+        .section {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #d52b1e;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #d52b1e;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        .info-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .info-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #666;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        .info-value {
+            font-size: 1rem;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        th {
+            background: #f5f5f5;
+            padding: 0.875rem;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #d52b1e;
+            color: #333;
+        }
+        td {
+            padding: 0.875rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        tr:hover {
+            background: #fafafa;
+        }
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .badge-verified {
+            background: #d4edda;
+            color: #155724;
+        }
+        .badge-high {
+            background: #e3f2fd;
+            color: #0d47a1;
+        }
+        .confidence-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">D&B</div>
+            <div class="duns-number">DUNS® 08-765-4321</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="report-header">
+            <div class="report-title">Business Information Report</div>
+            <div class="report-subtitle">WorkFusion, Inc.</div>
+            <div class="report-meta">
+                <div class="meta-box">
+                    <div class="meta-label">Report Date</div>
+                    <div class="meta-value">January 15, 2025</div>
+                </div>
+                <div class="meta-box">
+                    <div class="meta-label">Report Type</div>
+                    <div class="meta-value">Comprehensive Plus</div>
+                </div>
+                <div class="meta-box">
+                    <div class="meta-label">Confidence Code</div>
+                    <div class="meta-value">9 (Highest)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="confidence-box">
+                <strong>Data Confidence Rating: HIGH</strong> - Information verified through multiple authoritative sources including government registries, financial filings, and direct company verification.
+            </div>
+
+            <div class="section">
+                <div class="section-title">Company Identification</div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Business Name</div>
+                        <div class="info-value">WorkFusion, Inc.</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">DUNS Number</div>
+                        <div class="info-value">08-765-4321</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Tax ID / EIN</div>
+                        <div class="info-value">27-1234567</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Legal Form</div>
+                        <div class="info-value">Corporation</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">State of Incorporation</div>
+                        <div class="info-value">Delaware</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Year Started</div>
+                        <div class="info-value">2010</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Primary SIC</div>
+                        <div class="info-value">7372 - Prepackaged Software</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Primary NAICS</div>
+                        <div class="info-value">511210 - Software Publishers</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Business Location</div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Physical Address</div>
+                        <div class="info-value">
+                            48 Wall Street, 7th Floor<br>
+                            New York, NY 10005<br>
+                            United States
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Mailing Address</div>
+                        <div class="info-value">Same as Physical Address</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Phone</div>
+                        <div class="info-value">(212) 555-0100</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Website</div>
+                        <div class="info-value">www.workfusion.com</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Principals & Management</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Title</th>
+                            <th>Since</th>
+                            <th>Verification</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Adam Famularo</strong></td>
+                            <td>Chief Executive Officer</td>
+                            <td>2018</td>
+                            <td><span class="badge badge-verified">✓ Verified</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Richard Campbell</strong></td>
+                            <td>Chief Financial Officer</td>
+                            <td>2019</td>
+                            <td><span class="badge badge-verified">✓ Verified</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Max Yankelevich</strong></td>
+                            <td>Co-Founder, Director</td>
+                            <td>2010</td>
+                            <td><span class="badge badge-verified">✓ Verified</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Ownership & Control</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Entity Name</th>
+                            <th>Type</th>
+                            <th>Ownership %</th>
+                            <th>Control Level</th>
+                            <th>Verification Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Georgian Partners</strong></td>
+                            <td>Institutional Investor</td>
+                            <td><strong>28.0%</strong></td>
+                            <td>Significant Influence</td>
+                            <td><span class="badge badge-verified">✓ Verified</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Insight Partners</strong></td>
+                            <td>Institutional Investor</td>
+                            <td><strong>26.0%</strong></td>
+                            <td>Significant Influence</td>
+                            <td><span class="badge badge-verified">✓ Verified</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Serengeti Asset Management</strong></td>
+                            <td>Institutional Investor</td>
+                            <td><strong>20.0%</strong></td>
+                            <td>Minority Stake</td>
+                            <td><span class="badge badge-verified">✓ Verified</span></td>
+                        </tr>
+                        <tr>
+                            <td>Management & Employees</td>
+                            <td>Individual Shareholders</td>
+                            <td>16.0%</td>
+                            <td>Minority Stake</td>
+                            <td><span class="badge badge-high">Estimated</span></td>
+                        </tr>
+                        <tr>
+                            <td>Other Investors</td>
+                            <td>Various</td>
+                            <td>10.0%</td>
+                            <td>Minority Stake</td>
+                            <td><span class="badge badge-high">Estimated</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Financial Summary</div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Estimated Annual Sales</div>
+                        <div class="info-value">$50M - $100M</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Employee Count</div>
+                        <div class="info-value">200-500</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Total Funding Raised</div>
+                        <div class="info-value">$145M</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Latest Funding Round</div>
+                        <div class="info-value">Series E - January 2024</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Data Sources & Verification</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data Category</th>
+                            <th>Source</th>
+                            <th>Last Updated</th>
+                            <th>Confidence</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Corporate Registration</td>
+                            <td>Delaware Division of Corporations</td>
+                            <td>Jan 15, 2025</td>
+                            <td><span class="badge badge-verified">High</span></td>
+                        </tr>
+                        <tr>
+                            <td>Ownership Structure</td>
+                            <td>SEC Form D Filings</td>
+                            <td>Jan 15, 2025</td>
+                            <td><span class="badge badge-verified">High</span></td>
+                        </tr>
+                        <tr>
+                            <td>Management Information</td>
+                            <td>Company Disclosure, Public Records</td>
+                            <td>Jan 15, 2025</td>
+                            <td><span class="badge badge-verified">High</span></td>
+                        </tr>
+                        <tr>
+                            <td>Financial Information</td>
+                            <td>Estimated from Multiple Sources</td>
+                            <td>Q4 2024</td>
+                            <td><span class="badge badge-high">Medium</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="footer">
+            <strong>Dun & Bradstreet, Inc.</strong><br>
+            This report is provided for informational purposes only. D&B aggregates data from multiple sources.<br>
+            © 2025 Dun & Bradstreet, Inc. All rights reserved. DUNS® is a registered trademark of Dun & Bradstreet.
+        </div>
+    </div>
+</body>
+</html>

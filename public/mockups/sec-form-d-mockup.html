@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDGAR | Form D Filing - WorkFusion, Inc.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: #003d7a;
+            color: white;
+            padding: 1rem 0;
+            border-bottom: 4px solid #002855;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .sec-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .sec-logo-seal {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #003d7a;
+            font-size: 1.5rem;
+        }
+
+        .sec-title {
+            font-size: 1.75rem;
+            font-weight: 600;
+        }
+
+        .sec-subtitle {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .breadcrumb {
+            font-size: 0.85rem;
+            color: #e0e0e0;
+            margin-top: 0.5rem;
+        }
+
+        .breadcrumb a {
+            color: #88bfff;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Document Header */
+        .document-header {
+            background: linear-gradient(135deg, #003d7a 0%, #0055aa 100%);
+            color: white;
+            padding: 2rem;
+            border-bottom: 3px solid #002855;
+        }
+
+        .document-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .filing-meta {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .meta-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            opacity: 0.8;
+            margin-bottom: 0.25rem;
+        }
+
+        .meta-value {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        /* Content Section */
+        .content {
+            padding: 2rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #003d7a;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #003d7a;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .info-row {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 1rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .info-value {
+            color: #333;
+        }
+
+        .info-value.highlight {
+            background: #fff3cd;
+            padding: 0.5rem;
+            border-left: 3px solid #ffc107;
+            font-weight: 600;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .table th {
+            background: #f5f5f5;
+            padding: 0.75rem;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #ddd;
+            color: #003d7a;
+        }
+
+        .table td {
+            padding: 0.75rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .table tr:hover {
+            background: #f9f9f9;
+        }
+
+        .table tr.highlight {
+            background: #fff3cd;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .badge.new {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f5f5f5;
+            padding: 1.5rem 2rem;
+            border-top: 1px solid #ddd;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #003d7a;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .disclaimer {
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 1rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <div class="sec-logo">
+                <div class="sec-logo-seal">SEC</div>
+                <div>
+                    <div class="sec-title">U.S. Securities and Exchange Commission</div>
+                    <div class="sec-subtitle">EDGAR | Search and Access</div>
+                </div>
+            </div>
+            <div class="breadcrumb">
+                <a href="#">Home</a> &gt; <a href="#">Company Filings</a> &gt; <a href="#">WorkFusion, Inc.</a> &gt; Form D
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Document Header -->
+        <div class="document-header">
+            <div class="document-title">Form D - Notice of Exempt Offering of Securities</div>
+            <div class="filing-meta">
+                <div class="meta-item">
+                    <div class="meta-label">Form Type</div>
+                    <div class="meta-value">Form D</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Filing Date</div>
+                    <div class="meta-value">October 3, 2025</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Company</div>
+                    <div class="meta-value">WorkFusion, Inc.</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">CIK</div>
+                    <div class="meta-value">0001234567</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">File Number</div>
+                    <div class="meta-value">021-567890</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Accession Number</div>
+                    <div class="meta-value">0001234567-25-000003</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Issuer Information -->
+            <div class="section">
+                <h2 class="section-title">1. Issuer Information</h2>
+                <div class="info-grid">
+                    <div class="info-row">
+                        <div class="info-label">Issuer Name</div>
+                        <div class="info-value">WorkFusion, Inc.</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Jurisdiction of Incorporation</div>
+                        <div class="info-value">Delaware</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Year of Incorporation</div>
+                        <div class="info-value">2010</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Entity Type</div>
+                        <div class="info-value">Corporation</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Address</div>
+                        <div class="info-value">48 Wall Street, 7th Floor<br>New York, NY 10005<br>United States</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Phone</div>
+                        <div class="info-value">(212) 555-0100</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Offering Details -->
+            <div class="section">
+                <h2 class="section-title">2. Offering Details</h2>
+                <div class="info-grid">
+                    <div class="info-row">
+                        <div class="info-label">Total Offering Amount</div>
+                        <div class="info-value">$45,000,000</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Total Amount Sold</div>
+                        <div class="info-value">$45,000,000</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Total Remaining to be Sold</div>
+                        <div class="info-value">$0</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Type of Security</div>
+                        <div class="info-value">Equity - Preferred Stock</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Business Combination Transaction</div>
+                        <div class="info-value">No</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Minimum Investment Amount</div>
+                        <div class="info-value">$1,000,000</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Date of First Sale</div>
+                        <div class="info-value">September 16, 2025</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Persons -->
+            <div class="section">
+                <h2 class="section-title">3. Related Persons (Directors, Promoters, and Management)</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Relationship</th>
+                            <th>Clarification of Response</th>
+                            <th>Associated Entity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Adam Famularo</td>
+                            <td>Director, Officer</td>
+                            <td>Chief Executive Officer</td>
+                            <td>WorkFusion, Inc.</td>
+                        </tr>
+                        <tr>
+                            <td>Richard Campbell</td>
+                            <td>Officer</td>
+                            <td>Chief Financial Officer</td>
+                            <td>WorkFusion, Inc.</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td><strong>James Ellison</strong> <span class="badge new">NEW</span></td>
+                            <td><strong>Director</strong></td>
+                            <td><strong>Appointed to Board of Directors</strong></td>
+                            <td><strong>NGP Capital</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="margin-top: 1rem; padding: 1rem; background: #fff3cd; border-left: 3px solid #ffc107;">
+                    <strong>Note:</strong> James Ellison has been appointed to the Board of Directors in connection with NGP Capital's participation in the Series F funding round. Mr. Ellison is a Partner at NGP Capital.
+                </div>
+            </div>
+
+            <!-- Investors -->
+            <div class="section">
+                <h2 class="section-title">4. Investors</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Investor Name</th>
+                            <th>Type</th>
+                            <th>Investment Amount</th>
+                            <th>Ownership %</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Georgian Partners</td>
+                            <td>Lead Investor (Existing)</td>
+                            <td>$15,000,000</td>
+                            <td>26.3%</td>
+                        </tr>
+                        <tr>
+                            <td>Serengeti Asset Management</td>
+                            <td>Participating Investor</td>
+                            <td>$8,000,000</td>
+                            <td>12.0%</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td><strong>NGP Capital</strong> <span class="badge new">NEW</span></td>
+                            <td><strong>New Investor</strong></td>
+                            <td><strong>$12,000,000</strong></td>
+                            <td><strong>26.0%</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Teralys Capital</td>
+                            <td>Participating Investor</td>
+                            <td>$6,000,000</td>
+                            <td>6.2%</td>
+                        </tr>
+                        <tr>
+                            <td>Hawk Equity</td>
+                            <td>Participating Investor</td>
+                            <td>$4,000,000</td>
+                            <td>4.1%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Sales Compensation -->
+            <div class="section">
+                <h2 class="section-title">5. Sales Compensation Information</h2>
+                <div class="info-grid">
+                    <div class="info-row">
+                        <div class="info-label">Recipients of Sales Compensation</div>
+                        <div class="info-value">None</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Broker or Finder Used</div>
+                        <div class="info-value">No</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Use of Proceeds -->
+            <div class="section">
+                <h2 class="section-title">6. Use of Proceeds</h2>
+                <div class="info-grid">
+                    <div class="info-row">
+                        <div class="info-label">Primary Purpose</div>
+                        <div class="info-value">
+                            - Product development and AI platform enhancement<br>
+                            - Market expansion and sales growth<br>
+                            - Research and development for financial crime compliance solutions<br>
+                            - Working capital and general corporate purposes
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-links">
+                <a href="#">View Full Filing (PDF)</a>
+                <a href="#">Company Profile</a>
+                <a href="#">All Filings</a>
+                <a href="#">EDGAR Search</a>
+            </div>
+            <div class="disclaimer">
+                <strong>Disclaimer:</strong> This is a public filing made available through the SEC's EDGAR system. The information contained herein has been filed by the issuer and has not been reviewed or approved by the SEC. For more information, please refer to the complete filing documents.
+            </div>
+            <div style="margin-top: 1rem; font-size: 0.75rem; color: #999;">
+                U.S. Securities and Exchange Commission | 100 F Street, NE Washington, DC 20549 | (202) 551-8090
+            </div>
+        </div>
+    </div>
+</body>
+</html>

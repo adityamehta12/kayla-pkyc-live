@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companies House - AP01 Filing - WorkFusion UK Limited</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "GDS Transport", Arial, sans-serif;
+            background: #f3f2f1;
+            color: #0b0c0c;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: #1d70b8;
+            color: white;
+            padding: 1rem 0;
+            border-bottom: 10px solid #005ea5;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .gov-logo {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1d70b8;
+            font-size: 1.25rem;
+        }
+
+        .service-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .service-tagline {
+            font-size: 0.9rem;
+            opacity: 0.95;
+            margin-top: 0.25rem;
+        }
+
+        /* Phase Banner */
+        .phase-banner {
+            background: #005ea5;
+            color: white;
+            padding: 0.75rem 0;
+            font-size: 0.875rem;
+        }
+
+        .phase-banner-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .phase-tag {
+            display: inline-block;
+            background: #00703c;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            max-width: 1200px;
+            margin: 1rem auto;
+            padding: 0 2rem;
+            font-size: 0.875rem;
+        }
+
+        .breadcrumbs a {
+            color: #1d70b8;
+            text-decoration: none;
+        }
+
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border: 1px solid #b1b4b6;
+        }
+
+        /* Document Header */
+        .document-header {
+            border-bottom: 3px solid #1d70b8;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .document-type {
+            display: inline-block;
+            background: #1d70b8;
+            color: white;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .document-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0b0c0c;
+            margin-bottom: 1rem;
+        }
+
+        .document-meta {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+            background: #f3f2f1;
+            padding: 1.5rem;
+            border-left: 4px solid #1d70b8;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .meta-label {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: #505a5f;
+            margin-bottom: 0.25rem;
+        }
+
+        .meta-value {
+            font-size: 1rem;
+            color: #0b0c0c;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #00703c;
+            color: white;
+            font-weight: 700;
+            border-radius: 4px;
+        }
+
+        /* Content Section */
+        .section {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #b1b4b6;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0b0c0c;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .info-row {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid #f3f2f1;
+        }
+
+        .info-label {
+            font-weight: 700;
+            color: #0b0c0c;
+        }
+
+        .info-value {
+            color: #0b0c0c;
+        }
+
+        .info-value.highlight {
+            background: #fff7d8;
+            padding: 0.75rem;
+            border-left: 4px solid #ffdd00;
+            font-weight: 700;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            border: 1px solid #b1b4b6;
+        }
+
+        .table th {
+            background: #1d70b8;
+            color: white;
+            padding: 0.75rem;
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.875rem;
+        }
+
+        .table td {
+            padding: 0.75rem;
+            border-bottom: 1px solid #b1b4b6;
+            border-right: 1px solid #f3f2f1;
+        }
+
+        .table td:last-child {
+            border-right: none;
+        }
+
+        .table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .table tr:hover {
+            background: #f8f8f8;
+        }
+
+        .table tr.highlight {
+            background: #fff7d8;
+            font-weight: 700;
+        }
+
+        .new-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: #ffdd00;
+            color: #0b0c0c;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            border-radius: 4px;
+            margin-left: 0.5rem;
+        }
+
+        /* Notice Box */
+        .notice-box {
+            background: #d5e8f3;
+            border: 3px solid #1d70b8;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .notice-box h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Footer */
+        .footer {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-top: 2px solid #b1b4b6;
+            background: white;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #1d70b8;
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-info {
+            font-size: 0.875rem;
+            color: #505a5f;
+            line-height: 1.6;
+        }
+
+        .ogl-logo {
+            font-size: 0.75rem;
+            color: #505a5f;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <div class="gov-logo">CH</div>
+            <div>
+                <div class="service-name">Companies House</div>
+                <div class="service-tagline">Find and update company information</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Phase Banner -->
+    <div class="phase-banner">
+        <div class="phase-banner-content">
+            <span class="phase-tag">Live</span>
+            This is a live service
+        </div>
+    </div>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <a href="#">Home</a> &gt;
+        <a href="#">Search companies</a> &gt;
+        <a href="#">WorkFusion UK Limited</a> &gt;
+        <a href="#">Filing history</a> &gt;
+        AP01 - Appointment of Director
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Document Header -->
+        <div class="document-header">
+            <div class="document-type">AP01 Filing</div>
+            <h1 class="document-title">Appointment of Director</h1>
+            <div class="document-meta">
+                <div class="meta-item">
+                    <div class="meta-label">Document Type</div>
+                    <div class="meta-value">AP01 - Appointment of Director</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Company Name</div>
+                    <div class="meta-value">WorkFusion UK Limited</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Company Number</div>
+                    <div class="meta-value">08234567</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Filing Date</div>
+                    <div class="meta-value">03 October 2025</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Status</div>
+                    <div class="meta-value"><span class="status-badge">Accepted and Filed</span></div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Category</div>
+                    <div class="meta-value">Officers</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Appointment Details -->
+        <div class="section">
+            <h2 class="section-title">Appointment Details</h2>
+            <div class="notice-box">
+                <h3>New Director Appointed</h3>
+                <p>This filing records the appointment of a new director to the company's board of directors.</p>
+            </div>
+            <div class="info-grid">
+                <div class="info-row">
+                    <div class="info-label">Person Appointed</div>
+                    <div class="info-value highlight">Emma Williams</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Position</div>
+                    <div class="info-value">Director</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Appointment Date</div>
+                    <div class="info-value">01 October 2025</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Country of Residence</div>
+                    <div class="info-value">United Kingdom</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Nationality</div>
+                    <div class="info-value">British</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Date of Birth</div>
+                    <div class="info-value">15 June 1982</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Service Address</div>
+                    <div class="info-value">
+                        1 Finsbury Avenue<br>
+                        Floor 2<br>
+                        London<br>
+                        EC2M 2PP<br>
+                        United Kingdom
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Occupation</div>
+                    <div class="info-value">Chief Operations Officer</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Information -->
+        <div class="section">
+            <h2 class="section-title">Additional Information</h2>
+            <div class="info-grid">
+                <div class="info-row">
+                    <div class="info-label">Consent to Act</div>
+                    <div class="info-value">Yes - Consent provided</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">SIC Code</div>
+                    <div class="info-value">62012 - Business and domestic software development</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Previous Name</div>
+                    <div class="info-value">None</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Former Names</div>
+                    <div class="info-value">None</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Current Officers After This Filing -->
+        <div class="section">
+            <h2 class="section-title">Current Officers After This Filing</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Appointment Date</th>
+                        <th>Nationality</th>
+                        <th>Country of Residence</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Adam Famularo</td>
+                        <td>Director</td>
+                        <td>15 March 2011</td>
+                        <td>American</td>
+                        <td>United States</td>
+                    </tr>
+                    <tr>
+                        <td>Richard Campbell</td>
+                        <td>Director</td>
+                        <td>20 January 2020</td>
+                        <td>British</td>
+                        <td>United Kingdom</td>
+                    </tr>
+                    <tr>
+                        <td>James McGarry</td>
+                        <td>Director</td>
+                        <td>10 May 2019</td>
+                        <td>Irish</td>
+                        <td>Ireland</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td><strong>Emma Williams</strong> <span class="new-badge">New</span></td>
+                        <td><strong>Director</strong></td>
+                        <td><strong>01 October 2025</strong></td>
+                        <td><strong>British</strong></td>
+                        <td><strong>United Kingdom</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Company Information -->
+        <div class="section">
+            <h2 class="section-title">Company Information</h2>
+            <div class="info-grid">
+                <div class="info-row">
+                    <div class="info-label">Company Name</div>
+                    <div class="info-value">WorkFusion UK Limited</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Company Number</div>
+                    <div class="info-value">08234567</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Company Status</div>
+                    <div class="info-value">Active</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Company Type</div>
+                    <div class="info-value">Private limited company</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Incorporation Date</div>
+                    <div class="info-value">15 March 2011</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Registered Office Address</div>
+                    <div class="info-value">
+                        1 Finsbury Avenue<br>
+                        Floor 2<br>
+                        London<br>
+                        EC2M 2PP
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filing Information -->
+        <div class="section">
+            <h2 class="section-title">Filing Information</h2>
+            <div class="info-grid">
+                <div class="info-row">
+                    <div class="info-label">Description</div>
+                    <div class="info-value">Appointment of director</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Date Filed</div>
+                    <div class="info-value">03 October 2025</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Made Up Date</div>
+                    <div class="info-value">01 October 2025</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Barcode</div>
+                    <div class="info-value">Y8TQN7AK</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Companies House Receipt Date</div>
+                    <div class="info-value">03 October 2025</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-links">
+            <a href="#">View Company Profile</a>
+            <a href="#">Filing History</a>
+            <a href="#">Officers</a>
+            <a href="#">Persons with Significant Control</a>
+            <a href="#">Annual Returns</a>
+            <a href="#">Download Document (PDF)</a>
+        </div>
+        <div class="footer-info">
+            <p><strong>Companies House</strong></p>
+            <p>Crown Way, Cardiff, CF14 3UZ</p>
+            <p>Telephone: 0303 1234 500</p>
+            <p>Monday to Friday, 8:30am to 6pm</p>
+            <p style="margin-top: 1rem;">All content is available under the Open Government Licence v3.0, except where otherwise stated</p>
+        </div>
+        <div class="ogl-logo">
+            © Crown copyright
+        </div>
+    </div>
+</body>
+</html>

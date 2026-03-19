@@ -37,7 +37,7 @@ const app = express();
 app.use(require('cors')());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/mockups', express.static(path.join(__dirname, '..')));
+app.use('/mockups', express.static(path.join(__dirname, 'public', 'mockups')));
 
 // ---------------------------------------------------------------------------
 // OFAC SDN list — downloaded and parsed on startup, searched in memory

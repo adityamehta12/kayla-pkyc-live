@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkFusion - Company Profile | Crunchbase</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #f2f5f7;
+            color: #333;
+        }
+        .header {
+            background: #0288d1;
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        .company-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .company-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 0.5rem;
+        }
+        .company-description {
+            font-size: 1.125rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+        .tag {
+            padding: 0.4rem 0.8rem;
+            background: #e3f2fd;
+            color: #0288d1;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .quick-facts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .fact {
+            display: flex;
+            flex-direction: column;
+        }
+        .fact-label {
+            font-size: 0.8rem;
+            color: #888;
+            text-transform: uppercase;
+            margin-bottom: 0.35rem;
+            font-weight: 600;
+        }
+        .fact-value {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #000;
+        }
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 1.5rem;
+        }
+        .investors-grid {
+            display: grid;
+            gap: 1rem;
+        }
+        .investor-row {
+            background: #f8f9fa;
+            padding: 1.25rem;
+            border-radius: 8px;
+            border-left: 4px solid #0288d1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .investor-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .investor-name {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 0.25rem;
+        }
+        .investor-type {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .investor-ownership {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0288d1;
+        }
+        .update-banner {
+            background: #fff9c4;
+            border-left: 4px solid #fbc02d;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+        .metadata {
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🦄 Crunchbase</h1>
+    </div>
+
+    <div class="container">
+        <div class="update-banner">
+            <strong>Profile Last Updated:</strong> January 15, 2025 | Data verified from official company filings
+        </div>
+
+        <div class="company-card">
+            <div class="company-name">WorkFusion</div>
+            <div class="company-description">
+                WorkFusion is an AI-powered intelligent automation platform that helps financial institutions automate complex, judgment-based work processes. The company combines AI, machine learning, and RPA to deliver enterprise-grade automation solutions for financial crime compliance, KYC, transaction monitoring, and other critical banking operations.
+            </div>
+            <div class="tags">
+                <div class="tag">Enterprise Software</div>
+                <div class="tag">Artificial Intelligence</div>
+                <div class="tag">Financial Services</div>
+                <div class="tag">Automation</div>
+                <div class="tag">FinTech</div>
+            </div>
+            <div class="quick-facts">
+                <div class="fact">
+                    <div class="fact-label">Founded Date</div>
+                    <div class="fact-value">2010</div>
+                </div>
+                <div class="fact">
+                    <div class="fact-label">Headquarters</div>
+                    <div class="fact-value">New York, NY</div>
+                </div>
+                <div class="fact">
+                    <div class="fact-label">Company Type</div>
+                    <div class="fact-value">Private</div>
+                </div>
+                <div class="fact">
+                    <div class="fact-label">Employees</div>
+                    <div class="fact-value">200-500</div>
+                </div>
+                <div class="fact">
+                    <div class="fact-label">Total Funding</div>
+                    <div class="fact-value">$145M</div>
+                </div>
+                <div class="fact">
+                    <div class="fact-label">Last Funding</div>
+                    <div class="fact-value">Series E - Jan 2024</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="company-card">
+            <div class="section-title">Investors & Ownership</div>
+            <div class="investors-grid">
+                <div class="investor-row">
+                    <div class="investor-info">
+                        <div class="investor-name">Georgian Partners</div>
+                        <div class="investor-type">Lead Investor • Toronto, Canada</div>
+                    </div>
+                    <div class="investor-ownership">28.0%</div>
+                </div>
+                <div class="investor-row">
+                    <div class="investor-info">
+                        <div class="investor-name">Insight Partners</div>
+                        <div class="investor-type">Growth Equity • New York, NY</div>
+                    </div>
+                    <div class="investor-ownership">26.0%</div>
+                </div>
+                <div class="investor-row">
+                    <div class="investor-info">
+                        <div class="investor-name">Serengeti Asset Management</div>
+                        <div class="investor-type">Private Equity • San Francisco, CA</div>
+                    </div>
+                    <div class="investor-ownership">20.0%</div>
+                </div>
+            </div>
+            <div class="metadata">
+                <strong>Data Source:</strong> SEC filings, company disclosures, and LP-verified data<br/>
+                <strong>Last Verification:</strong> January 15, 2025<br/>
+                <strong>Confidence Level:</strong> High (verified from multiple sources)
+            </div>
+        </div>
+    </div>
+</body>
+</html>
