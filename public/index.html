@@ -6232,7 +6232,6 @@ function switchConfigSection(id, el) {
 function renderConfigDataPoints() {
   const container = document.getElementById('cfg-datapoints-list');
   container.innerHTML = cfgDataPoints.map(cat => {
-    const matClass = cat.materiality === 'CRITICAL' ? 'critical' : (cat.materiality === 'HIGH' ? 'high' : 'medium');
     const fieldsHtml = cat.fields.map(f =>
       '<div class="cfg-field-row"><label class="source-toggle"><input type="checkbox" checked><span class="slider"></span></label><span class="cfg-field-name">' + f + '</span><span class="cfg-field-sources">' + cat.sources.map(s => '<span class="cov-badge" style="font-size:8px;padding:1px 4px;margin-left:2px;">' + s + '</span>').join('') + '</span></div>'
     ).join('');
@@ -6240,8 +6239,6 @@ function renderConfigDataPoints() {
       '<div class="cfg-cat-header" onclick="this.parentElement.classList.toggle(\'expanded\')">' +
         '<span class="cat-icon">' + cat.icon + '</span>' +
         '<span class="cat-name">' + cat.name + '</span>' +
-        '<span class="materiality-badge ' + matClass + '">' + cat.materiality + '</span>' +
-        '<span style="font-size:11px;color:#718096;margin:0 8px;">Trigger: <strong>' + cat.trigger + '</strong></span>' +
         '<span class="cat-count">' + cat.fields.length + ' fields</span>' +
         '<span class="cat-chevron">&#9654;</span>' +
       '</div>' +

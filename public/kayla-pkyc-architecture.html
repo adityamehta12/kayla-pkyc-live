@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kayla AI — pKYC Business Architecture</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: linear-gradient(135deg, #f8fafc, #e2e8f0); min-height: 100vh; display: flex; align-items: center; justify-content: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; padding: 20px; }
+
+  .slide {
+    width: 1280px; height: 720px; background: #fff;
+    border-radius: 8px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+    padding: 22px 28px 16px; display: flex; flex-direction: column; overflow: hidden;
+  }
+
+  /* Header */
+  .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+  .logo { display: flex; align-items: center; gap: 8px; }
+  .logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg, #1a365d, #2c5282); border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+  .logo-text { font-size: 14px; font-weight: 700; color: #1a365d; }
+  .logo-sub { font-size: 9px; color: #94a3b8; font-weight: 500; }
+  .h-title { font-size: 18px; font-weight: 700; color: #0f172a; text-align: right; }
+  .h-sub { font-size: 10px; color: #64748b; text-align: right; }
+  .accent { width: 50px; height: 3px; background: linear-gradient(90deg, #1a365d, #3b82f6); border-radius: 2px; margin: 6px 0 10px; }
+
+  /* Agent legend */
+  .legend {
+    display: flex; align-items: center; gap: 14px; margin-bottom: 10px;
+    padding: 6px 12px; background: #f8fafc; border-radius: 6px; border: 1px solid #edf2f7;
+  }
+  .legend-label { font-size: 8px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-right: 4px; }
+  .legend-item { display: flex; align-items: center; gap: 4px; font-size: 9px; color: #334155; }
+  .legend-dot { width: 8px; height: 8px; border-radius: 2px; }
+  .ld-k { background: #1a365d; }
+  .ld-ev { background: #7c3aed; }
+  .ld-en { background: #0891b2; }
+  .ld-h { background: #d97706; }
+
+  /* Flow */
+  .flow { display: flex; gap: 0; flex: 1; min-height: 0; }
+
+  .phase { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+
+  .ph {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 6px 10px; border-radius: 7px 7px 0 0; margin: 0 2px;
+  }
+  .ph-title { font-size: 12px; font-weight: 700; line-height: 1.2; }
+  .ph-time { font-size: 8px; opacity: 0.55; font-style: italic; white-space: nowrap; }
+
+  .p1 .ph { background: linear-gradient(135deg, #eff6ff, #dbeafe); color: #1e40af; }
+  .p2 .ph { background: linear-gradient(135deg, #fef2f2, #fecaca); color: #dc2626; }
+  .p3 .ph { background: linear-gradient(135deg, #f5f3ff, #ede9fe); color: #6d28d9; }
+  .p4 .ph { background: linear-gradient(135deg, #fefce8, #fef3c7); color: #a16207; }
+  .p5 .ph { background: linear-gradient(135deg, #f0fdf4, #dcfce7); color: #15803d; }
+
+  .pb {
+    flex: 1; display: flex; flex-direction: column; gap: 3px;
+    padding: 6px 4px; margin: 0 2px;
+    border: 1px solid #edf2f7; border-top: none; border-radius: 0 0 7px 7px;
+    background: #fafbfc;
+  }
+
+  /* Card with left accent */
+  .c {
+    background: #fff; border-radius: 5px; padding: 5px 8px 5px 10px;
+    flex: 1; display: flex; flex-direction: column;
+    border-left: 3px solid transparent;
+  }
+  .c-k { border-left-color: #1a365d; }
+  .c-ev { border-left-color: #7c3aed; }
+  .c-en { border-left-color: #0891b2; }
+  .c-h { border-left-color: #d97706; }
+  .c-p { border-left-color: #1a365d; border-left-style: dashed; }
+
+  .c-t { font-size: 9px; font-weight: 700; color: #0f172a; margin-bottom: 1px; line-height: 1.2; }
+  .c-d { font-size: 8px; color: #64748b; line-height: 1.4; flex: 1; }
+
+  .c-hl { background: #fffbeb; border-left-color: #d97706; }
+
+  /* Arrow */
+  .arr { display: flex; align-items: center; justify-content: center; width: 14px; flex-shrink: 0; padding-top: 20px; }
+  .arr-t { width: 0; height: 0; border-top: 4px solid transparent; border-bottom: 4px solid transparent; border-left: 6px solid #cbd5e1; }
+
+  /* Integration strip */
+  .int-strip {
+    display: flex; align-items: center; gap: 6px;
+    margin-top: 8px; padding: 7px 14px;
+    background: #f8fafc; border: 1px solid #edf2f7; border-radius: 7px;
+  }
+  .int-label { font-size: 8px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; margin-right: 4px; }
+  .int-tag { font-size: 8px; padding: 3px 8px; background: #fff; border: 1px solid #e2e8f0; border-radius: 4px; color: #334155; font-weight: 500; }
+  .int-tag-pega { background: linear-gradient(135deg, #0f172a, #1e3a5f); color: #93c5fd; font-weight: 600; border: none; }
+  .int-sep { width: 1px; height: 16px; background: #e2e8f0; margin: 0 4px; }
+  .int-note { font-size: 7px; color: #94a3b8; margin-left: auto; }
+
+  /* Config strip */
+  .cfg {
+    display: flex; align-items: center; justify-content: center; gap: 20px;
+    padding: 6px 0 2px; margin-top: 6px;
+  }
+  .cfg-i { display: flex; align-items: center; gap: 5px; font-size: 9px; color: #475569; }
+  .cfg-icon { width: 18px; height: 18px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 10px; background: #f1f5f9; border: 1px solid #e2e8f0; }
+  .cfg-l { font-weight: 600; color: #1a365d; }
+  .cfg-d { font-size: 8px; color: #94a3b8; }
+
+  /* Bottom */
+  .bot { display: flex; gap: 0; margin-top: 6px; border-radius: 7px; overflow: hidden; border: 1px solid #e2e8f0; }
+  .bo { flex: 1; display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-right: 1px solid #e2e8f0; }
+  .bo:last-child { border-right: none; }
+  .bo-i { font-size: 14px; }
+  .bo-s { font-size: 13px; font-weight: 800; color: #0f172a; line-height: 1; }
+  .bo-l { font-size: 7px; color: #64748b; }
+  .bo-g { background: #f0fdf4; }
+
+  .footer { display: flex; justify-content: space-between; padding-top: 4px; font-size: 7px; color: #94a3b8; }
+</style>
+</head>
+<body>
+
+<div class="slide">
+  <div class="header">
+    <div class="logo">
+      <div class="logo-icon">&#129302;</div>
+      <div><div class="logo-text">KAYLA AI</div><div class="logo-sub">WorkFusion</div></div>
+    </div>
+    <div>
+      <div class="h-title">Perpetual KYC &mdash; Continuous Compliance, Not Periodic Reviews</div>
+      <div class="h-sub">Kayla monitors, detects, investigates, and prepares &mdash; your analyst just approves</div>
+    </div>
+  </div>
+  <div class="accent"></div>
+
+  <!-- Agent legend -->
+  <div class="legend">
+    <div class="legend-label">AI Agents:</div>
+    <div class="legend-item"><div class="legend-dot ld-k"></div><strong>Kayla</strong> &mdash; Orchestration, validation, reconciliation</div>
+    <div class="legend-item"><div class="legend-dot ld-ev"></div><strong>Evelyn</strong> &mdash; Sanctions &amp; PEP screening</div>
+    <div class="legend-item"><div class="legend-dot ld-en"></div><strong>Evan</strong> &mdash; Adverse media monitoring</div>
+    <div class="legend-item"><div class="legend-dot ld-h"></div><strong>Human</strong> &mdash; Compliance officer review</div>
+  </div>
+
+  <div class="flow">
+    <!-- P1 -->
+    <div class="phase p1">
+      <div class="ph"><div class="ph-title">Continuous Monitoring</div><div class="ph-time">Always on</div></div>
+      <div class="pb">
+        <div class="c c-k">
+          <div class="c-t">Data Sources</div>
+          <div class="c-d">Regulatory registries, commercial databases, market intelligence, news &amp; OSINT &mdash; live APIs and batch feeds</div>
+        </div>
+        <div class="c c-k">
+          <div class="c-t">Monitored Data Points</div>
+          <div class="c-d">Ownership, governance, financials, regulatory status, operations, adverse media &mdash; defined by compliance team</div>
+        </div>
+        <div class="c c-k">
+          <div class="c-t">Rules &amp; Thresholds</div>
+          <div class="c-d">Materiality thresholds, jurisdictional triggers, screening sensitivity, SLA deadlines</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arr"><div class="arr-t"></div></div>
+
+    <!-- P2 -->
+    <div class="phase p2">
+      <div class="ph"><div class="ph-title">Detect &amp; Classify</div><div class="ph-time">Seconds</div></div>
+      <div class="pb">
+        <div class="c c-k">
+          <div class="c-t">Data Discrepancies Found</div>
+          <div class="c-d">On-file KYC records compared against all connected sources. Mismatches flagged by category and severity.</div>
+        </div>
+        <div class="c c-k">
+          <div class="c-t">Rules Engine Evaluates</div>
+          <div class="c-d">Every configured rule evaluated against detected changes. Severity, workflow, and SLA automatically determined.</div>
+        </div>
+        <div class="c c-k">
+          <div class="c-t">Case Created in CLM</div>
+          <div class="c-d">Case auto-created with severity, SLA, and assigned analyst. Workflow stages tracked in real-time.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arr"><div class="arr-t"></div></div>
+
+    <!-- P3 -->
+    <div class="phase p3">
+      <div class="ph"><div class="ph-title">Investigate &amp; Validate</div><div class="ph-time">Minutes</div></div>
+      <div class="pb">
+        <div class="c c-k">
+          <div class="c-t">Root Cause &amp; OSINT</div>
+          <div class="c-d">Live API queries + AI-powered OSINT to determine what happened &mdash; M&amp;A, restructuring, regulatory action</div>
+        </div>
+        <div class="c c-k">
+          <div class="c-t">UBO Reconciliation</div>
+          <div class="c-d">Multi-source comparison with source-of-truth hierarchy. Stale data identified and deprioritized.</div>
+        </div>
+        <div class="c c-en" style="border-image:linear-gradient(to bottom, #7c3aed, #0891b2) 1;">
+          <div class="c-t">Screening</div>
+          <div class="c-d">Sanctions, PEP, adverse media. Every potential match reviewed with AI reasoning and disposition.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arr"><div class="arr-t"></div></div>
+
+    <!-- P4 -->
+    <div class="phase p4">
+      <div class="ph"><div class="ph-title">Human Review</div><div class="ph-time">1 decision</div></div>
+      <div class="pb">
+        <div class="c c-h">
+          <div class="c-t">Complete Analysis Package</div>
+          <div class="c-d">Compliance officer reviews full findings: discrepancies, root cause, ownership, screening, risk assessment.</div>
+        </div>
+        <div class="c c-h">
+          <div class="c-t">Approve, Reject, or Escalate</div>
+          <div class="c-d">One-click decision with exception paths &mdash; request more info, reject, or escalate to senior / EDD.</div>
+        </div>
+        <div class="c c-hl">
+          <div class="c-t" style="color:#92400e;">Analyst Judgment, Not Busywork</div>
+          <div class="c-d" style="color:#a16207;">Kayla handles research and preparation. The analyst focuses on decisions and exceptions.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arr"><div class="arr-t"></div></div>
+
+    <!-- P5 -->
+    <div class="phase p5">
+      <div class="ph"><div class="ph-title">Execute &amp; Update</div><div class="ph-time">Automated</div></div>
+      <div class="pb">
+        <div class="c c-k">
+          <div class="c-t">RFI &amp; Document Collection</div>
+          <div class="c-d">AI-generated document requests. Auto-retrieval from registries. OCR/IDP extraction on received documents.</div>
+        </div>
+        <div class="c c-k">
+          <div class="c-t">Downstream Systems Updated</div>
+          <div class="c-d">Core banking, CRM, transaction monitoring, screening, documents &mdash; all synchronized with audit trail.</div>
+        </div>
+        <div class="c c-k">
+          <div class="c-t">Regulatory Filings Drafted</div>
+          <div class="c-d">Jurisdiction-specific filings auto-generated from validated data. Regulation-mapped, deadline-tracked.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Integration strip (CLM moved here — context, not header) -->
+  <div class="int-strip">
+    <div class="int-label">Integrates with:</div>
+    <div class="int-tag int-tag-pega">&#128279; PEGA CLM</div>
+    <div class="int-tag">Temenos T24</div>
+    <div class="int-tag">Salesforce</div>
+    <div class="int-tag">Actimize</div>
+    <div class="int-tag">Fircosoft</div>
+    <div class="int-tag">SharePoint</div>
+    <div class="int-sep"></div>
+    <div class="int-note">Full client lifecycle: Onboarding &rarr; pKYC Monitoring &rarr; Periodic Review &rarr; Event-Driven Review &rarr; Offboarding</div>
+  </div>
+
+  <!-- Config strip -->
+  <div class="cfg">
+    <div class="cfg-i"><div class="cfg-icon">&#128225;</div><div><span class="cfg-l">Data Sources</span><br><span class="cfg-d">Add, remove, configure</span></div></div>
+    <div class="cfg-i"><div class="cfg-icon">&#128202;</div><div><span class="cfg-l">Data Points</span><br><span class="cfg-d">Fields &amp; categories</span></div></div>
+    <div class="cfg-i"><div class="cfg-icon">&#9881;&#65039;</div><div><span class="cfg-l">Rules</span><br><span class="cfg-d">Thresholds &amp; triggers</span></div></div>
+    <div class="cfg-i"><div class="cfg-icon">&#128268;</div><div><span class="cfg-l">Integrations</span><br><span class="cfg-d">CLM, core banking, screening</span></div></div>
+    <div class="cfg-i"><div class="cfg-icon">&#127758;</div><div><span class="cfg-l">Jurisdictions</span><br><span class="cfg-d">Regulation-mapped filings</span></div></div>
+  </div>
+
+  <div class="footer">
+    <span>&#129302; Kayla AI &bull; WorkFusion</span>
+    <span>Everything fully configurable by the compliance team &mdash; no engineering required</span>
+  </div>
+</div>
+
+</body>
+</html>
