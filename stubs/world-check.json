@@ -1,0 +1,172 @@
+{
+  "_meta": {
+    "source": "stub",
+    "label": "CACHED",
+    "provider": "World-Check One (LSEG / Refinitiv)",
+    "lastUpdated": "2026-03-17",
+    "apiVersion": "v2.8",
+    "requestId": "wc1-req-2026-03-17-f5b6c8",
+    "responseTime": "1.89s",
+    "groupId": "GRP-BOFA-KYC-2026",
+    "databaseDate": "2026-03-17",
+    "totalProfilesInDatabase": 5420000,
+    "disclaimer": "World-Check One is a screening tool. Results require human review and should not be used as the sole basis for compliance decisions. LSEG makes no warranty regarding the completeness or accuracy of data."
+  },
+  "searchCriteria": {
+    "caseSystemId": "WC1-CASE-2026-039571",
+    "entityContext": "UiPath, Inc. — KYC Refresh (WorkFusion Acquisition)",
+    "searchMode": "Individual",
+    "matchThreshold": 85,
+    "enableFuzzyMatch": true,
+    "enablePhonetics": true,
+    "dateOfBirthTolerance": "2 years",
+    "requestedBy": "Sarah Chen",
+    "clientReference": "KYC-WF-2026-PKYC-001"
+  },
+  "screeningResults": [
+    {
+      "resultId": "WC1-RES-001",
+      "inputName": "Daniel Dines",
+      "inputDateOfBirth": "1972-08-02",
+      "inputNationality": "Romania",
+      "role": "Co-Founder & CEO, UiPath, Inc.",
+      "relationToEntity": "Ultimate Beneficial Owner",
+      "resolution": "CLEAR — No True Match",
+      "matchDetails": {
+        "matchScore": 0,
+        "potentialMatchesReturned": 2,
+        "potentialMatchesReviewed": 2,
+        "potentialMatchesDiscarded": 2,
+        "discardReasons": [
+          "Match 1: 'Daniel Dinescu' — Different individual, different DOB (1955), different country of residence (Romania). Name similarity only. Discarded.",
+          "Match 2: 'Daniela Dines-Kovacs' — Female, different DOB (1980), different nationality (Hungary). Partial name match only. Discarded."
+        ],
+        "trueMatchConfirmed": false
+      },
+      "categoriesChecked": {
+        "sanctions": { "result": "CLEAR", "listsChecked": 48, "matchesFound": 0 },
+        "pep": { "result": "CLEAR", "sourcesReviewed": 214, "matchesFound": 0 },
+        "adverseMedia": { "result": "CLEAR", "sourcesReviewed": 12500, "relevantHits": 0 },
+        "lawEnforcement": { "result": "CLEAR", "listsChecked": 31, "matchesFound": 0 },
+        "regulatoryEnforcement": { "result": "CLEAR", "sourcesReviewed": 89, "matchesFound": 0 },
+        "stateOwnedEnterprise": { "result": "NOT APPLICABLE", "note": "Individual screening — SOE check N/A" },
+        "insolvency": { "result": "CLEAR", "sourcesReviewed": 22, "matchesFound": 0 }
+      },
+      "profileSummary": {
+        "note": "Romanian-born technology entrepreneur and US citizen. Co-Founder and CEO of UiPath (NYSE: PATH). Forbes-listed billionaire. No political exposure, regulatory actions, or adverse findings identified across all World-Check categories.",
+        "keyFacts": [
+          "Born Bucharest, Romania, 1972",
+          "US citizen since approx. 2015",
+          "Co-founded DeskOver (later UiPath) in 2005",
+          "Took UiPath public on NYSE in April 2021",
+          "Class B supervoting share structure — controls ~35% voting power"
+        ]
+      },
+      "riskLevel": "Low",
+      "screeningDate": "2026-03-17T09:05:00Z",
+      "analystReview": {
+        "reviewedBy": "Auto-Resolution Engine v4.2",
+        "reviewDate": "2026-03-17T09:05:02Z",
+        "outcome": "No escalation required"
+      }
+    },
+    {
+      "resultId": "WC1-RES-002",
+      "inputName": "Ashim Gupta",
+      "inputDateOfBirth": "1975-03-14",
+      "inputNationality": "United States",
+      "role": "CFO & COO, UiPath, Inc.",
+      "relationToEntity": "Senior Executive",
+      "resolution": "CLEAR — No True Match",
+      "matchDetails": {
+        "matchScore": 0,
+        "potentialMatchesReturned": 3,
+        "potentialMatchesReviewed": 3,
+        "potentialMatchesDiscarded": 3,
+        "discardReasons": [
+          "Match 1: 'Ashim Gupta' — Common name match, but DOB 1962, nationality India, government official (retired). Different individual.",
+          "Match 2: 'Ashim Kumar Gupta' — DOB 1968, India. Banking sector but different individual. No UiPath connection.",
+          "Match 3: 'Ashim Gupta' — DOB 1981, UK. Different individual entirely."
+        ],
+        "trueMatchConfirmed": false
+      },
+      "categoriesChecked": {
+        "sanctions": { "result": "CLEAR", "listsChecked": 48, "matchesFound": 0 },
+        "pep": { "result": "CLEAR", "sourcesReviewed": 214, "matchesFound": 0 },
+        "adverseMedia": { "result": "CLEAR", "sourcesReviewed": 12500, "relevantHits": 0 },
+        "lawEnforcement": { "result": "CLEAR", "listsChecked": 31, "matchesFound": 0 },
+        "regulatoryEnforcement": { "result": "CLEAR", "sourcesReviewed": 89, "matchesFound": 0 },
+        "stateOwnedEnterprise": { "result": "NOT APPLICABLE", "note": "Individual screening — SOE check N/A" },
+        "insolvency": { "result": "CLEAR", "sourcesReviewed": 22, "matchesFound": 0 }
+      },
+      "profileSummary": {
+        "note": "US-based technology executive. CFO and COO of UiPath since 2021. Previously held senior finance roles at Palo Alto Networks and Informatica. No political exposure or adverse findings.",
+        "keyFacts": [
+          "US citizen",
+          "CFO & COO of UiPath since 2021",
+          "Former VP Finance at Palo Alto Networks",
+          "CPA, MBA"
+        ]
+      },
+      "riskLevel": "Low",
+      "screeningDate": "2026-03-17T09:05:05Z",
+      "analystReview": {
+        "reviewedBy": "Auto-Resolution Engine v4.2",
+        "reviewDate": "2026-03-17T09:05:06Z",
+        "outcome": "No escalation required"
+      }
+    },
+    {
+      "resultId": "WC1-RES-003",
+      "inputName": "Philippe Botteri",
+      "inputDateOfBirth": "1974-11-22",
+      "inputNationality": "France",
+      "role": "Partner, Accel — Major shareholder representative, UiPath",
+      "relationToEntity": "Board Member / Significant Shareholder Representative",
+      "resolution": "CLEAR — No True Match",
+      "matchDetails": {
+        "matchScore": 0,
+        "potentialMatchesReturned": 0,
+        "potentialMatchesReviewed": 0,
+        "potentialMatchesDiscarded": 0,
+        "discardReasons": [],
+        "trueMatchConfirmed": false
+      },
+      "categoriesChecked": {
+        "sanctions": { "result": "CLEAR", "listsChecked": 48, "matchesFound": 0 },
+        "pep": { "result": "CLEAR", "sourcesReviewed": 214, "matchesFound": 0 },
+        "adverseMedia": { "result": "CLEAR", "sourcesReviewed": 12500, "relevantHits": 0 },
+        "lawEnforcement": { "result": "CLEAR", "listsChecked": 31, "matchesFound": 0 },
+        "regulatoryEnforcement": { "result": "CLEAR", "sourcesReviewed": 89, "matchesFound": 0 },
+        "stateOwnedEnterprise": { "result": "NOT APPLICABLE", "note": "Individual screening — SOE check N/A" },
+        "insolvency": { "result": "CLEAR", "sourcesReviewed": 22, "matchesFound": 0 }
+      },
+      "profileSummary": {
+        "note": "French national, venture capital professional based in London. Partner at Accel since 2008. Led Accel's investment in UiPath. Board member of UiPath. Previously at McKinsey & Company. No political exposure or adverse findings.",
+        "keyFacts": [
+          "French citizen, based in London",
+          "Partner at Accel (venture capital)",
+          "Board member of UiPath since 2017",
+          "INSEAD MBA"
+        ]
+      },
+      "riskLevel": "Low",
+      "screeningDate": "2026-03-17T09:05:10Z",
+      "analystReview": {
+        "reviewedBy": "Auto-Resolution Engine v4.2",
+        "reviewDate": "2026-03-17T09:05:11Z",
+        "outcome": "No escalation required"
+      }
+    }
+  ],
+  "batchSummary": {
+    "totalScreened": 3,
+    "cleared": 3,
+    "truePositives": 0,
+    "pendingReview": 0,
+    "falsePositivesDiscarded": 5,
+    "overallResult": "ALL CLEAR",
+    "recommendation": "No matches requiring escalation. All potential matches resolved as false positives through automated and manual review. Screening complete — proceed with standard processing.",
+    "nextScheduledScreening": "2026-06-17"
+  }
+}

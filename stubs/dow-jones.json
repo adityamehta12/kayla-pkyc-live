@@ -1,0 +1,181 @@
+{
+  "_meta": {
+    "source": "stub",
+    "label": "CACHED",
+    "provider": "Dow Jones Risk & Compliance",
+    "lastUpdated": "2026-03-17",
+    "apiVersion": "v5.3",
+    "requestId": "djrc-req-2026-03-17-e2d4a7",
+    "responseTime": "2.14s",
+    "databaseVersion": "2026-03-17T06:00:00Z",
+    "totalRecordsSearched": 2840000,
+    "disclaimer": "Dow Jones Risk & Compliance screening results are provided for informational purposes. Results should be reviewed by a qualified compliance professional. Absence of matches does not guarantee an individual is free from risk."
+  },
+  "searchCriteria": {
+    "searchType": "Individual",
+    "entityContext": "UiPath, Inc. (NYSE: PATH) — post-acquisition of WorkFusion, Inc.",
+    "requestedBy": "Sarah Chen, Compliance Officer",
+    "caseReference": "KYC-WF-2026-PKYC-001"
+  },
+  "screeningResults": [
+    {
+      "subjectId": "DJRC-SUBJ-001",
+      "name": "Daniel Dines",
+      "dateOfBirth": "1972-08-02",
+      "nationality": "Romanian / United States (dual)",
+      "role": "Co-Founder & CEO, UiPath, Inc.",
+      "relationToEntity": "Ultimate Beneficial Owner — controlling shareholder via Class B supervoting shares",
+      "screening": {
+        "pepStatus": {
+          "result": "NOT PEP",
+          "details": "No matches found in PEP databases. Subject is a private sector executive with no identified current or former government roles.",
+          "relatedPEP": false,
+          "closeAssociate": false
+        },
+        "sanctionsStatus": {
+          "result": "CLEAR",
+          "listsChecked": [
+            "OFAC SDN List",
+            "OFAC Consolidated Non-SDN",
+            "EU Consolidated Sanctions",
+            "UK HMT Sanctions",
+            "UN Security Council Consolidated List",
+            "Australia DFAT Sanctions",
+            "Canada SEMA List",
+            "Switzerland SECO List"
+          ],
+          "matchesFound": 0,
+          "lastChecked": "2026-03-17"
+        },
+        "adverseMedia": {
+          "result": "NO SIGNIFICANT ADVERSE",
+          "articlesReviewed": 342,
+          "relevantArticles": 0,
+          "categories": {
+            "financialCrime": false,
+            "fraud": false,
+            "corruption": false,
+            "terrorismFinancing": false,
+            "moneylaundering": false,
+            "taxEvasion": false,
+            "regulatoryAction": false,
+            "litigation": false
+          },
+          "summary": "No adverse media identified. Public coverage is predominantly positive, focused on business achievements, enterprise automation industry leadership, and philanthropic activities.",
+          "note": "Subject is Romanian-born, US citizen. Co-founded UiPath in 2005 in Bucharest. Forbes billionaire (software category). No political affiliations or government roles identified."
+        }
+      },
+      "riskLevel": "Low",
+      "screeningDate": "2026-03-17T08:12:00Z",
+      "nextReviewDate": "2026-09-17"
+    },
+    {
+      "subjectId": "DJRC-SUBJ-002",
+      "name": "Ashim Gupta",
+      "dateOfBirth": "1975-03-14",
+      "nationality": "United States",
+      "role": "CFO & COO, UiPath, Inc.",
+      "relationToEntity": "Senior executive of acquiring entity",
+      "screening": {
+        "pepStatus": {
+          "result": "NOT PEP",
+          "details": "No matches found. Private sector executive. Previously held roles at Palo Alto Networks and Informatica — no government affiliations identified.",
+          "relatedPEP": false,
+          "closeAssociate": false
+        },
+        "sanctionsStatus": {
+          "result": "CLEAR",
+          "listsChecked": [
+            "OFAC SDN List",
+            "OFAC Consolidated Non-SDN",
+            "EU Consolidated Sanctions",
+            "UK HMT Sanctions",
+            "UN Security Council Consolidated List",
+            "Australia DFAT Sanctions",
+            "Canada SEMA List",
+            "Switzerland SECO List"
+          ],
+          "matchesFound": 0,
+          "lastChecked": "2026-03-17"
+        },
+        "adverseMedia": {
+          "result": "NO ADVERSE",
+          "articlesReviewed": 89,
+          "relevantArticles": 0,
+          "categories": {
+            "financialCrime": false,
+            "fraud": false,
+            "corruption": false,
+            "terrorismFinancing": false,
+            "moneylaundering": false,
+            "taxEvasion": false,
+            "regulatoryAction": false,
+            "litigation": false
+          },
+          "summary": "No adverse media identified. Coverage relates to corporate earnings calls and industry conference participation."
+        }
+      },
+      "riskLevel": "Low",
+      "screeningDate": "2026-03-17T08:12:05Z",
+      "nextReviewDate": "2026-09-17"
+    },
+    {
+      "subjectId": "DJRC-SUBJ-003",
+      "name": "Philippe Botteri",
+      "dateOfBirth": "1974-11-22",
+      "nationality": "France / United States",
+      "role": "Partner, Accel — Major shareholder in UiPath",
+      "relationToEntity": "Board member and significant shareholder representative",
+      "screening": {
+        "pepStatus": {
+          "result": "NOT PEP",
+          "details": "No matches found. Subject is a venture capital professional. Partner at Accel since 2008, previously at McKinsey & Company. No government roles identified.",
+          "relatedPEP": false,
+          "closeAssociate": false
+        },
+        "sanctionsStatus": {
+          "result": "CLEAR",
+          "listsChecked": [
+            "OFAC SDN List",
+            "OFAC Consolidated Non-SDN",
+            "EU Consolidated Sanctions",
+            "UK HMT Sanctions",
+            "UN Security Council Consolidated List",
+            "Australia DFAT Sanctions",
+            "Canada SEMA List",
+            "Switzerland SECO List"
+          ],
+          "matchesFound": 0,
+          "lastChecked": "2026-03-17"
+        },
+        "adverseMedia": {
+          "result": "NO ADVERSE",
+          "articlesReviewed": 156,
+          "relevantArticles": 0,
+          "categories": {
+            "financialCrime": false,
+            "fraud": false,
+            "corruption": false,
+            "terrorismFinancing": false,
+            "moneylaundering": false,
+            "taxEvasion": false,
+            "regulatoryAction": false,
+            "litigation": false
+          },
+          "summary": "No adverse media identified. Coverage relates to venture capital activity, board memberships, and industry speaking engagements."
+        }
+      },
+      "riskLevel": "Low",
+      "screeningDate": "2026-03-17T08:12:10Z",
+      "nextReviewDate": "2026-09-17"
+    }
+  ],
+  "summary": {
+    "totalScreened": 3,
+    "pepMatches": 0,
+    "sanctionsMatches": 0,
+    "adverseMediaFlags": 0,
+    "overallAssessment": "All screened individuals returned CLEAR across PEP, sanctions, and adverse media checks. No enhanced due diligence triggers identified.",
+    "recommendation": "Proceed with standard KYC processing."
+  }
+}

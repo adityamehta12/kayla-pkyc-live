@@ -1,0 +1,200 @@
+{
+  "_meta": {
+    "source": "stub",
+    "label": "CACHED",
+    "provider": "Dun & Bradstreet",
+    "lastUpdated": "2026-03-10",
+    "apiVersion": "v2.1",
+    "requestId": "dnb-req-2026-03-17-b4e7d2",
+    "responseTime": "0.87s",
+    "productCode": "DCP_PREM",
+    "disclaimer": "D&B provides this report subject to terms of service. Confidence codes reflect data verification level."
+  },
+  "dunsNumber": "08-234-5678",
+  "entity": {
+    "primaryName": "UiPath, Inc.",
+    "tradeName": "UiPath",
+    "legalForm": "Corporation",
+    "incorporationState": "Delaware",
+    "incorporationDate": "2015-06-30",
+    "status": "Active",
+    "stockExchange": "NYSE",
+    "tickerSymbol": "PATH",
+    "address": {
+      "primary": {
+        "street": "1 Vanderbilt Avenue, 60th Floor",
+        "city": "New York",
+        "state": "NY",
+        "postalCode": "10017",
+        "country": "United States"
+      },
+      "registered": {
+        "street": "1209 Orange Street",
+        "city": "Wilmington",
+        "state": "DE",
+        "postalCode": "19801",
+        "country": "United States"
+      }
+    },
+    "phone": "+1-844-432-0455",
+    "website": "www.uipath.com",
+    "industryClassification": {
+      "sic": {
+        "primary": "7372",
+        "description": "Prepackaged Software"
+      },
+      "naics": {
+        "primary": "511210",
+        "description": "Software Publishers"
+      }
+    },
+    "description": "UiPath is a leading enterprise automation and AI platform company. Originally founded in Bucharest, Romania in 2005 by Daniel Dines and Marius Tirca, the company reincorporated in Delaware and is headquartered in New York City. UiPath provides robotic process automation (RPA), AI-powered process mining, and agentic AI solutions for enterprise customers worldwide.",
+    "foundedYear": 2005,
+    "foundedLocation": "Bucharest, Romania"
+  },
+  "financials": {
+    "annualRevenue": {
+      "amount": 1308000000,
+      "currency": "USD",
+      "fiscalYear": "FY2025",
+      "fiscalYearEnd": "2025-01-31",
+      "qualifier": "reported"
+    },
+    "netIncome": {
+      "amount": -88000000,
+      "currency": "USD",
+      "fiscalYear": "FY2025"
+    },
+    "totalAssets": {
+      "amount": 4200000000,
+      "currency": "USD",
+      "fiscalYear": "FY2025",
+      "qualifier": "estimated"
+    },
+    "marketCapitalization": {
+      "amount": 7800000000,
+      "currency": "USD",
+      "asOfDate": "2026-03-14"
+    }
+  },
+  "employees": {
+    "consolidatedTotal": 4085,
+    "hereOnly": 1200,
+    "asOfDate": "2025-12-31",
+    "trend": "Growing"
+  },
+  "confidenceCode": {
+    "code": 9,
+    "description": "Highest — Based on direct verification with company, public filings, and multiple corroborating sources."
+  },
+  "riskIndicators": {
+    "dAndBRating": "5A2",
+    "compositeRisk": "Low",
+    "financialStressScore": 1487,
+    "failureScore": {
+      "score": 1521,
+      "class": 1,
+      "percentile": 95,
+      "interpretation": "Low risk of business failure"
+    },
+    "delinquencyScore": {
+      "score": 564,
+      "class": 1,
+      "interpretation": "Low risk of severe delinquency"
+    }
+  },
+  "keyManagement": [
+    {
+      "name": "Daniel Dines",
+      "position": "Co-Founder & Chief Executive Officer",
+      "since": "2005"
+    },
+    {
+      "name": "Ashim Gupta",
+      "position": "Chief Financial Officer & Chief Operating Officer",
+      "since": "2021"
+    },
+    {
+      "name": "Graham Sheldon",
+      "position": "Chief Product Officer",
+      "since": "2023"
+    },
+    {
+      "name": "Ted Kummert",
+      "position": "Executive Vice President, Product & Engineering",
+      "since": "2022"
+    }
+  ],
+  "ownership": {
+    "publiclyTraded": true,
+    "exchange": "NYSE",
+    "ticker": "PATH",
+    "controllingInterest": "Daniel Dines (Class B shares, supervoting)",
+    "majorShareholders": [
+      { "name": "Daniel Dines", "percentage": 35.2, "type": "Individual / Founder", "note": "Class B supervoting shares" },
+      { "name": "Accel Partners", "percentage": 12.8, "type": "Venture Capital" },
+      { "name": "Institutional Investors", "percentage": 42.0, "type": "Various" },
+      { "name": "Public Float", "percentage": 10.0, "type": "Public" }
+    ],
+    "subsidiaries": {
+      "total": 38,
+      "notable": [
+        {
+          "name": "WorkFusion, Inc.",
+          "dunsNumber": "07-123-4567",
+          "ownership": "100%",
+          "acquisitionDate": "2026-02-06",
+          "status": "Active — Wholly Owned Subsidiary",
+          "country": "United States"
+        },
+        {
+          "name": "UiPath SRL",
+          "dunsNumber": "RO-456-7890",
+          "ownership": "100%",
+          "country": "Romania"
+        },
+        {
+          "name": "UiPath K.K.",
+          "dunsNumber": "JP-789-0123",
+          "ownership": "100%",
+          "country": "Japan"
+        },
+        {
+          "name": "UiPath GmbH",
+          "dunsNumber": "DE-012-3456",
+          "ownership": "100%",
+          "country": "Germany"
+        }
+      ]
+    }
+  },
+  "corporateHistory": {
+    "events": [
+      {
+        "date": "2005",
+        "description": "Founded in Bucharest, Romania as DeskOver by Daniel Dines and Marius Tirca"
+      },
+      {
+        "date": "2015",
+        "description": "Rebranded as UiPath; reincorporated in Delaware"
+      },
+      {
+        "date": "2021-04-21",
+        "description": "Initial Public Offering on NYSE under ticker PATH"
+      },
+      {
+        "date": "2026-02-06",
+        "description": "Acquired WorkFusion, Inc., an AI-powered compliance automation company"
+      }
+    ]
+  },
+  "legalFilings": {
+    "bankruptcies": [],
+    "liens": [],
+    "judgments": [],
+    "ucc": {
+      "count": 3,
+      "note": "Standard commercial filings — equipment leases and credit facilities"
+    }
+  }
+}

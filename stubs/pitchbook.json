@@ -1,0 +1,179 @@
+{
+  "_meta": {
+    "source": "stub",
+    "label": "CACHED",
+    "provider": "PitchBook Data, Inc.",
+    "lastUpdated": "2026-03-08",
+    "apiVersion": "v3.2",
+    "requestId": "pb-req-2026-03-17-d1c8e3",
+    "responseTime": "0.65s",
+    "disclaimer": "PitchBook data is compiled from public filings, proprietary research, and direct company submissions. Deal values marked 'Not Disclosed' may be estimated in PitchBook's premium analytics."
+  },
+  "dealId": "PB-DEAL-2026-028491",
+  "deal": {
+    "headline": "UiPath Acquires WorkFusion",
+    "dealType": "M&A — Acquisition",
+    "dealSubType": "Full Acquisition (100%)",
+    "announcedDate": "2026-02-06",
+    "closedDate": "2026-02-06",
+    "dealStatus": "Closed",
+    "dealValue": {
+      "disclosed": false,
+      "amount": null,
+      "currency": "USD",
+      "note": "Not Disclosed"
+    },
+    "enterpriseValue": {
+      "disclosed": false,
+      "estimatedRange": "$400M - $600M",
+      "note": "PitchBook estimate based on comparable transactions and last known valuation"
+    },
+    "strategicRationale": "Strengthening agentic AI solutions for financial services compliance. UiPath aims to combine its enterprise automation platform with WorkFusion's purpose-built AI Digital Workers for AML, KYC, and sanctions screening, creating a comprehensive compliance automation offering for Tier 1 and Tier 2 banks.",
+    "advisors": {
+      "acquirer": [
+        { "firm": "Goldman Sachs", "role": "Financial Advisor" },
+        { "firm": "Skadden, Arps, Slate, Meagher & Flom LLP", "role": "Legal Advisor" }
+      ],
+      "target": [
+        { "firm": "Qatalyst Partners", "role": "Financial Advisor" },
+        { "firm": "Goodwin Procter LLP", "role": "Legal Advisor" }
+      ]
+    }
+  },
+  "acquirer": {
+    "name": "UiPath, Inc.",
+    "pitchbookId": "PB-CO-53291847",
+    "exchange": "NYSE",
+    "ticker": "PATH",
+    "headquarters": "New York, NY, United States",
+    "sector": "Information Technology",
+    "industry": "Application Software",
+    "subIndustry": "Enterprise Automation / RPA",
+    "founded": 2005,
+    "employees": 4085,
+    "marketCapitalization": {
+      "amount": 7800000000,
+      "currency": "USD",
+      "asOfDate": "2026-03-14"
+    },
+    "lastTwelveMonthsRevenue": {
+      "amount": 1380000000,
+      "currency": "USD",
+      "period": "LTM ending Jan 2026"
+    },
+    "ceo": "Daniel Dines",
+    "website": "https://www.uipath.com",
+    "description": "UiPath is a leading enterprise automation platform company offering robotic process automation (RPA), AI-powered process mining, and agentic AI solutions. The company serves over 10,000 customers globally across financial services, healthcare, manufacturing, and public sector verticals."
+  },
+  "target": {
+    "name": "WorkFusion, Inc.",
+    "pitchbookId": "PB-CO-91837462",
+    "headquarters": "New York, NY, United States",
+    "sector": "Information Technology",
+    "industry": "Application Software",
+    "subIndustry": "Compliance Automation / RegTech",
+    "founded": 2010,
+    "employees": 350,
+    "totalFundingRaised": {
+      "amount": 348500000,
+      "currency": "USD"
+    },
+    "lastKnownValuation": {
+      "amount": 510000000,
+      "currency": "USD",
+      "date": "2025-09-18",
+      "round": "Series F (Post-Money)",
+      "note": "Estimated"
+    },
+    "ceo": "Adam Famularo",
+    "website": "https://www.workfusion.com",
+    "description": "WorkFusion develops AI-powered Digital Workers for financial services compliance, automating KYC, AML, sanctions screening, and transaction monitoring. Key products include Kayla (KYC onboarding), Evelyn (sanctions/PEP screening), and Tara (transaction monitoring)."
+  },
+  "preDealInvestors": [
+    {
+      "name": "Georgian Partners",
+      "type": "Growth Equity",
+      "headquarters": "Toronto, Canada",
+      "totalInvested": "Multiple rounds (Series B through F)",
+      "estimatedOwnership": "26.3%"
+    },
+    {
+      "name": "Insight Partners",
+      "type": "Growth Equity / Venture Capital",
+      "headquarters": "New York, USA",
+      "totalInvested": "Series D, E",
+      "estimatedOwnership": "25.7%"
+    },
+    {
+      "name": "Serengeti Asset Management",
+      "type": "Hedge Fund / Crossover",
+      "headquarters": "New York, USA",
+      "totalInvested": "Series D, E",
+      "estimatedOwnership": "20.0%"
+    },
+    {
+      "name": "NGP Capital",
+      "type": "Corporate Venture Capital",
+      "headquarters": "Helsinki, Finland",
+      "totalInvested": "Series F",
+      "estimatedOwnership": "5.8%"
+    },
+    {
+      "name": "Teralys Capital",
+      "type": "Fund of Funds / Venture Capital",
+      "headquarters": "Montreal, Canada",
+      "totalInvested": "Series F",
+      "estimatedOwnership": "2.1%"
+    },
+    {
+      "name": "Hawk Equity",
+      "type": "Venture Capital",
+      "headquarters": "New York, USA",
+      "totalInvested": "Series F",
+      "estimatedOwnership": "1.3%"
+    },
+    {
+      "name": "iNovia Capital",
+      "type": "Venture Capital",
+      "headquarters": "Montreal, Canada",
+      "totalInvested": "Series B, C",
+      "estimatedOwnership": "3.2%"
+    },
+    {
+      "name": "Sapphire Ventures",
+      "type": "Venture Capital",
+      "headquarters": "Palo Alto, USA",
+      "totalInvested": "Series A, B, C",
+      "estimatedOwnership": "2.8%"
+    }
+  ],
+  "comparableTransactions": [
+    {
+      "date": "2024-08-15",
+      "acquirer": "Visa",
+      "target": "Featurespace",
+      "dealValue": "$935M",
+      "sector": "Financial Crime / AI"
+    },
+    {
+      "date": "2023-11-20",
+      "acquirer": "Nasdaq",
+      "target": "Adenza",
+      "dealValue": "$10.5B",
+      "sector": "Financial Technology / RegTech"
+    },
+    {
+      "date": "2025-03-10",
+      "acquirer": "NICE Systems",
+      "target": "Sedicii Innovations",
+      "dealValue": "Not Disclosed",
+      "sector": "Identity Verification / KYC"
+    }
+  ],
+  "keyDates": [
+    { "date": "2026-01-15", "event": "Definitive agreement signed" },
+    { "date": "2026-01-28", "event": "HSR Act filing submitted" },
+    { "date": "2026-02-04", "event": "HSR waiting period expired" },
+    { "date": "2026-02-06", "event": "Transaction closed" }
+  ]
+}

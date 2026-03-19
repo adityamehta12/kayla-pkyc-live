@@ -1,0 +1,161 @@
+{
+  "_meta": {
+    "source": "stub",
+    "label": "CACHED",
+    "provider": "Bureau van Dijk / Orbis",
+    "lastUpdated": "2025-12-15",
+    "apiVersion": "v1.4",
+    "requestId": "orb-req-2026-03-17-a8f3c1",
+    "responseTime": "1.23s",
+    "disclaimer": "This information is provided as-is from Bureau van Dijk's Orbis database. Data currency depends on source filing frequency and BvD update cycles."
+  },
+  "bvdId": "US-WF-001234567",
+  "entity": {
+    "name": "WorkFusion, Inc.",
+    "legalForm": "Corporation",
+    "status": "Active",
+    "incorporationDate": "2010-03-15",
+    "incorporationState": "Delaware",
+    "registeredAgent": "Corporation Service Company",
+    "address": {
+      "street": "1359 Broadway, Suite 1520",
+      "city": "New York",
+      "state": "NY",
+      "postalCode": "10018",
+      "country": "United States"
+    },
+    "industry": {
+      "naics": "511210",
+      "naicsDescription": "Software Publishers",
+      "sic": "7372",
+      "sicDescription": "Prepackaged Software",
+      "nace": "6201",
+      "naceDescription": "Computer programming activities"
+    },
+    "employees": {
+      "range": "200-500",
+      "exact": null,
+      "asOfDate": "2025-09-30"
+    },
+    "operatingRevenue": {
+      "range": "$50M - $100M",
+      "currency": "USD",
+      "qualifier": "estimated",
+      "fiscalYear": 2024
+    },
+    "website": "www.workfusion.com",
+    "phone": "+1-646-454-0400"
+  },
+  "ownership": {
+    "note": "Data as of last verification date. May not reflect recent M&A activity.",
+    "lastVerified": "2025-12-15",
+    "totalIdentifiedShareholders": 5,
+    "shareholders": [
+      {
+        "name": "Georgian Partners",
+        "bvdId": "CA-GP-002345678",
+        "percentage": 26.3,
+        "percentageDirect": 26.3,
+        "type": "Investment Fund",
+        "country": "Canada",
+        "city": "Toronto"
+      },
+      {
+        "name": "Insight Partners",
+        "bvdId": "US-IP-003456789",
+        "percentage": 25.7,
+        "percentageDirect": 25.7,
+        "type": "Investment Fund",
+        "country": "USA",
+        "city": "New York"
+      },
+      {
+        "name": "Serengeti Asset Management",
+        "bvdId": "US-SA-004567890",
+        "percentage": 20.0,
+        "percentageDirect": 20.0,
+        "type": "Investment Fund",
+        "country": "USA",
+        "city": "New York"
+      },
+      {
+        "name": "Management & Employees",
+        "bvdId": null,
+        "percentage": 18.0,
+        "percentageDirect": 18.0,
+        "type": "Internal",
+        "country": "USA",
+        "city": null
+      },
+      {
+        "name": "Other Investors",
+        "bvdId": null,
+        "percentage": 10.0,
+        "percentageDirect": 10.0,
+        "type": "Various",
+        "country": "Various",
+        "city": null
+      }
+    ],
+    "ubo": {
+      "identified": false,
+      "note": "No single natural person identified with >25% beneficial ownership. Fund managers may qualify — further analysis required."
+    }
+  },
+  "subsidiaries": [
+    {
+      "name": "WorkFusion UK Limited",
+      "country": "United Kingdom",
+      "ownership": "100%",
+      "bvdId": "GB-WF-009876543",
+      "status": "Active",
+      "incorporationDate": "2016-08-22"
+    },
+    {
+      "name": "WorkFusion India Private Limited",
+      "country": "India",
+      "ownership": "100%",
+      "bvdId": "IN-WF-004567890",
+      "status": "Active",
+      "incorporationDate": "2017-04-10"
+    }
+  ],
+  "keyManagement": [
+    {
+      "name": "Adam Famularo",
+      "position": "Chief Executive Officer",
+      "appointmentDate": "2021-06-01",
+      "source": "Delaware Division of Corporations"
+    },
+    {
+      "name": "Richard Campbell",
+      "position": "Chief Financial Officer",
+      "appointmentDate": "2022-01-15",
+      "source": "SEC filings"
+    },
+    {
+      "name": "Max Yankelevich",
+      "position": "Co-Founder & Chief Strategy Officer",
+      "appointmentDate": "2010-03-15",
+      "source": "Delaware Division of Corporations"
+    }
+  ],
+  "financials": {
+    "available": false,
+    "note": "Private company — audited financials not publicly filed."
+  },
+  "corporateEvents": {
+    "recent": [
+      {
+        "date": "2025-09-18",
+        "type": "Funding Round",
+        "description": "Series F funding round — $45M raised"
+      },
+      {
+        "date": "2025-11-03",
+        "type": "Board Change",
+        "description": "James Ellison appointed to Board of Directors"
+      }
+    ]
+  }
+}

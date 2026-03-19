@@ -1,0 +1,164 @@
+{
+  "_meta": {
+    "source": "stub",
+    "label": "CACHED",
+    "provider": "Crunchbase",
+    "lastUpdated": "2026-03-12",
+    "apiVersion": "v4.0",
+    "requestId": "cb-req-2026-03-17-c9a2f5",
+    "responseTime": "0.42s",
+    "disclaimer": "Crunchbase data is sourced from public filings, press releases, community contributions, and proprietary research."
+  },
+  "entityId": "workfusion",
+  "permalink": "https://www.crunchbase.com/organization/workfusion",
+  "organization": {
+    "name": "WorkFusion",
+    "legalName": "WorkFusion, Inc.",
+    "status": "Acquired",
+    "closedOn": null,
+    "acquiredBy": {
+      "name": "UiPath, Inc.",
+      "permalink": "https://www.crunchbase.com/organization/uipath",
+      "ticker": "NYSE: PATH"
+    },
+    "acquisitionDate": "2026-02-06",
+    "acquisitionType": "Acquisition",
+    "shortDescription": "WorkFusion provides AI-powered automation for anti-money laundering, KYC, and sanctions compliance in financial services.",
+    "description": "WorkFusion is an enterprise AI company that builds intelligent automation solutions specifically designed for financial services compliance. The company's AI Digital Workers — including Kayla (KYC), Evelyn (sanctions screening), and Tara (transaction monitoring) — automate complex, judgment-intensive processes across AML, KYC, and sanctions workflows. WorkFusion was acquired by UiPath in February 2026 to strengthen UiPath's agentic AI capabilities for regulated industries.",
+    "foundedOn": "2010-03-15",
+    "headquarters": {
+      "city": "New York",
+      "state": "New York",
+      "country": "United States"
+    },
+    "website": "https://www.workfusion.com",
+    "numberOfEmployees": "201-500",
+    "categories": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Compliance",
+      "KYC",
+      "Anti-Money Laundering",
+      "Robotic Process Automation",
+      "Financial Services",
+      "RegTech"
+    ],
+    "operatingStatus": "Acquired"
+  },
+  "funding": {
+    "totalFundingAmount": {
+      "amount": 348500000,
+      "currency": "USD"
+    },
+    "numberOfFundingRounds": 7,
+    "lastFundingType": "Series F",
+    "lastFundingDate": "2025-09-18",
+    "fundingRounds": [
+      {
+        "roundName": "Seed",
+        "date": "2012-06-01",
+        "amount": 2500000,
+        "currency": "USD",
+        "leadInvestors": ["Flybridge Capital Partners"],
+        "investors": ["Flybridge Capital Partners"]
+      },
+      {
+        "roundName": "Series A",
+        "date": "2014-03-20",
+        "amount": 15000000,
+        "currency": "USD",
+        "leadInvestors": ["Sapphire Ventures"],
+        "investors": ["Sapphire Ventures", "Flybridge Capital Partners"]
+      },
+      {
+        "roundName": "Series B",
+        "date": "2016-07-14",
+        "amount": 35000000,
+        "currency": "USD",
+        "leadInvestors": ["iNovia Capital"],
+        "investors": ["iNovia Capital", "Sapphire Ventures", "Georgian Partners"]
+      },
+      {
+        "roundName": "Series C",
+        "date": "2017-10-05",
+        "amount": 50000000,
+        "currency": "USD",
+        "leadInvestors": ["Georgian Partners"],
+        "investors": ["Georgian Partners", "iNovia Capital", "Sapphire Ventures"]
+      },
+      {
+        "roundName": "Series D",
+        "date": "2019-04-22",
+        "amount": 85000000,
+        "currency": "USD",
+        "leadInvestors": ["Insight Partners"],
+        "investors": ["Insight Partners", "Georgian Partners", "Serengeti Asset Management"]
+      },
+      {
+        "roundName": "Series E",
+        "date": "2021-11-15",
+        "amount": 116000000,
+        "currency": "USD",
+        "leadInvestors": ["Insight Partners"],
+        "investors": ["Insight Partners", "Georgian Partners", "Serengeti Asset Management", "Alpha Intelligence Capital"]
+      },
+      {
+        "roundName": "Series F",
+        "date": "2025-09-18",
+        "amount": 45000000,
+        "currency": "USD",
+        "leadInvestors": ["Georgian Partners"],
+        "investors": ["Georgian Partners", "NGP Capital", "Teralys Capital", "Hawk Equity"]
+      }
+    ]
+  },
+  "people": {
+    "founders": [
+      {
+        "name": "Max Yankelevich",
+        "title": "Co-Founder & Chief Strategy Officer",
+        "linkedin": "https://www.linkedin.com/in/maxyankelevich"
+      },
+      {
+        "name": "Andrew Volkov",
+        "title": "Co-Founder",
+        "linkedin": null
+      }
+    ],
+    "currentLeadership": [
+      {
+        "name": "Adam Famularo",
+        "title": "Chief Executive Officer",
+        "joinedDate": "2021-06-01",
+        "note": "Pre-acquisition CEO; current role post-acquisition TBD"
+      },
+      {
+        "name": "Richard Campbell",
+        "title": "Chief Financial Officer",
+        "joinedDate": "2022-01-15"
+      },
+      {
+        "name": "Craig Harber",
+        "title": "Chief Revenue Officer",
+        "joinedDate": "2022-05-01"
+      }
+    ]
+  },
+  "acquisitionDetails": {
+    "acquirer": "UiPath, Inc.",
+    "acquirerPermalink": "https://www.crunchbase.com/organization/uipath",
+    "announcedDate": "2026-02-06",
+    "price": null,
+    "priceNote": "Terms not disclosed",
+    "type": "Acquisition",
+    "status": "Completed",
+    "pressRelease": "https://www.uipath.com/newsroom/uipath-acquires-workfusion",
+    "strategicRationale": "UiPath acquired WorkFusion to expand its agentic AI capabilities in financial services compliance, adding purpose-built AI Digital Workers for KYC, AML, and sanctions screening to UiPath's enterprise automation platform."
+  },
+  "similarOrganizations": [
+    { "name": "Quantexa", "category": "KYC / Financial Crime" },
+    { "name": "ComplyAdvantage", "category": "AML / Compliance" },
+    { "name": "Chainalysis", "category": "Financial Compliance" },
+    { "name": "Featurespace", "category": "Financial Crime Detection" }
+  ]
+}
