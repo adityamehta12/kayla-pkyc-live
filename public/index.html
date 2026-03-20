@@ -2840,63 +2840,74 @@ body {
         </div>
       </div>
 
-      <!-- Verified UBO Register (resolved answer, not comparison) -->
+      <!-- Verified UBO Register -->
       <div class="card" id="ubo-register-card" style="display:none;">
         <div class="card-header">
-          <h3>&#9989; Verified UBO Register &mdash; Post-Reconciliation</h3>
+          <h3>Verified UBO Register</h3>
           <span class="badge badge-success" id="ubo-matrix-status">RECONCILED</span>
         </div>
         <div id="ubo-alert-area"></div>
-        <table class="data-table" style="margin-bottom:12px;">
+        <table class="data-table" style="font-size:12px;">
           <thead>
             <tr>
-              <th>Beneficial Owner / Controller</th>
-              <th>Role</th>
-              <th>Ownership / Control</th>
-              <th>Source Confidence</th>
-              <th>Status</th>
+              <th style="width:180px;">Beneficial Owner</th>
+              <th style="width:140px;">Ownership / Control</th>
+              <th>Evidence</th>
+              <th style="width:80px;">Status</th>
             </tr>
           </thead>
           <tbody>
-            <tr style="background:#f0fff4;">
-              <td><strong>UiPath, Inc.</strong><br><small style="color:#718096;">NYSE: PATH &bull; CIK 0001734722</small></td>
-              <td>Direct Parent (100%)</td>
-              <td><strong>100% equity ownership</strong></td>
-              <td><span style="color:#38a169; font-weight:600;">4/5 sources agree</span><br><small style="color:#a0aec0;">SEC 8-K, D&amp;B, Corp Registry, Documentary</small></td>
-              <td><span class="badge badge-success">&#9989; VERIFIED</span></td>
+            <tr>
+              <td>
+                <strong style="color:#1a365d;">UiPath, Inc.</strong><br>
+                <small style="color:#718096;">NYSE: PATH &bull; Direct Parent</small>
+              </td>
+              <td><strong>100% equity</strong></td>
+              <td style="font-size:11px;">
+                <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001734722&type=8-K&dateb=&owner=include&count=10" target="_blank" style="color:#2b6cb0; text-decoration:none; font-weight:600;">SEC EDGAR 8-K</a> <span style="background:#dbeafe;color:#1e40af;padding:1px 4px;border-radius:2px;font-size:8px;font-weight:600;">PRIMARY</span> &bull;
+                <a href="/mockups/dun-bradstreet-mockup.html" target="_blank" style="color:#2b6cb0; text-decoration:none;">D&amp;B</a> &bull;
+                <a href="/mockups/delaware-corporate-registry-mockup.html" target="_blank" style="color:#2b6cb0; text-decoration:none;">Corp Registry</a><br>
+                <span style="color:#38a169; font-size:10px;">4/5 sources confirm</span> &bull;
+                <span style="color:#a0aec0; text-decoration:line-through; font-size:10px;"><a href="/mockups/bvd-orbis-mockup.html" target="_blank" style="color:#a0aec0;">BVD</a> stale</span>
+              </td>
+              <td><span style="background:#c6f6d5;color:#276749;padding:2px 8px;border-radius:4px;font-size:9px;font-weight:600;">VERIFIED</span></td>
             </tr>
-            <tr style="background:#f0fff4;">
-              <td><strong>Daniel Dines</strong><br><small style="color:#718096;">CEO, UiPath, Inc.</small></td>
-              <td>Control Person</td>
-              <td><strong>~22% voting power</strong><br><small style="color:#718096;">Dual-class shares (Class B)</small></td>
-              <td><span style="color:#38a169; font-weight:600;">3/5 sources agree</span><br><small style="color:#a0aec0;">SEC DEF 14A, D&amp;B, Documentary</small></td>
-              <td><span class="badge badge-success">&#9989; VERIFIED</span></td>
+            <tr>
+              <td>
+                <strong style="color:#1a365d;">Daniel Dines</strong><br>
+                <small style="color:#718096;">CEO &bull; Control Person</small>
+              </td>
+              <td><strong>~22% voting</strong><br><small style="color:#718096;">Dual-class (Class B)</small></td>
+              <td style="font-size:11px;">
+                <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001734722&type=8-K&dateb=&owner=include&count=10" target="_blank" style="color:#2b6cb0; text-decoration:none; font-weight:600;">SEC DEF 14A</a> <span style="background:#dbeafe;color:#1e40af;padding:1px 4px;border-radius:2px;font-size:8px;font-weight:600;">PRIMARY</span> &bull;
+                <a href="/mockups/dun-bradstreet-mockup.html" target="_blank" style="color:#2b6cb0; text-decoration:none;">D&amp;B</a> (21.8%)<br>
+                <span style="color:#38a169; font-size:10px;">3/5 sources confirm</span>
+              </td>
+              <td><span style="background:#c6f6d5;color:#276749;padding:2px 8px;border-radius:4px;font-size:9px;font-weight:600;">VERIFIED</span></td>
             </tr>
-            <tr style="opacity:0.55;">
+            <tr style="opacity:0.5;">
               <td><span style="text-decoration:line-through;">Max Yankelevich (28.5%)</span><br><small style="color:#a0aec0;">Former Founder &amp; CEO</small></td>
-              <td><span style="color:#a0aec0;">Former UBO</span></td>
               <td><span style="color:#a0aec0;">0% &mdash; bought out</span></td>
-              <td><small style="color:#a0aec0;">Confirmed removed</small></td>
-              <td><span class="badge badge-archived">ARCHIVED</span></td>
+              <td style="font-size:11px; color:#a0aec0;">Confirmed removed across SEC, D&amp;B, Corp Registry</td>
+              <td><span style="background:#edf2f7;color:#718096;padding:2px 8px;border-radius:4px;font-size:9px;font-weight:600;">ARCHIVED</span></td>
             </tr>
-            <tr style="opacity:0.55;">
+            <tr style="opacity:0.5;">
               <td><span style="text-decoration:line-through;">Georgian Partners (26.3%)</span><br><small style="color:#a0aec0;">Former Series F Lead</small></td>
-              <td><span style="color:#a0aec0;">Former UBO</span></td>
               <td><span style="color:#a0aec0;">0% &mdash; bought out</span></td>
-              <td><small style="color:#d69e2e;">&#9888; BVD still shows 26.3% (stale)</small></td>
-              <td><span class="badge badge-archived">ARCHIVED</span></td>
+              <td style="font-size:11px; color:#a0aec0;">Confirmed removed &bull; <span style="color:#d69e2e;"><a href="/mockups/bvd-orbis-mockup.html" target="_blank" style="color:#d69e2e;">BVD</a> still shows 26.3%</span> <span style="background:#fefcbf;color:#975a16;padding:1px 4px;border-radius:2px;font-size:8px;">STALE</span></td>
+              <td><span style="background:#edf2f7;color:#718096;padding:2px 8px;border-radius:4px;font-size:9px;font-weight:600;">ARCHIVED</span></td>
             </tr>
-            <tr style="opacity:0.55;">
+            <tr style="opacity:0.5;">
               <td><span style="text-decoration:line-through;">Insight Partners (25.7%)</span><br><small style="color:#a0aec0;">Former Series E Lead</small></td>
-              <td><span style="color:#a0aec0;">Former UBO</span></td>
               <td><span style="color:#a0aec0;">0% &mdash; bought out</span></td>
-              <td><small style="color:#d69e2e;">&#9888; BVD still shows 25.7% (stale)</small></td>
-              <td><span class="badge badge-archived">ARCHIVED</span></td>
+              <td style="font-size:11px; color:#a0aec0;">Confirmed removed &bull; <span style="color:#d69e2e;"><a href="/mockups/bvd-orbis-mockup.html" target="_blank" style="color:#d69e2e;">BVD</a> still shows 25.7%</span> <span style="background:#fefcbf;color:#975a16;padding:1px 4px;border-radius:2px;font-size:8px;">STALE</span></td>
+              <td><span style="background:#edf2f7;color:#718096;padding:2px 8px;border-radius:4px;font-size:9px;font-weight:600;">ARCHIVED</span></td>
             </tr>
           </tbody>
         </table>
-        <div style="padding:10px 16px; background:#fffff0; border:1px solid #fefcbf; border-radius:8px; font-size:11px; color:#744210;">
-          &#9888;&#65039; <strong>Data source note:</strong> BVD/Orbis (last updated Dec 2025) still shows pre-acquisition ownership. Assessed as data lag, not substantive discrepancy. Automated re-check scheduled in 14 days. 4/5 sources confirm resolved ownership above.
+        <div style="padding:8px 16px; background:#f8fafc; border-top:1px solid #edf2f7; font-size:10px; color:#94a3b8; display:flex; justify-content:space-between;">
+          <span><a href="/mockups/bvd-orbis-mockup.html" target="_blank" style="color:#d69e2e; text-decoration:none;">BVD/Orbis</a> data stale (Dec 2025) &mdash; deprioritized, re-check in 14 days</span>
+          <span>Tier 1 regulatory sources take precedence</span>
         </div>
       </div>
 
