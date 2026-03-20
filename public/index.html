@@ -2577,87 +2577,103 @@ body {
         <div id="step1-categories" style="display:grid; grid-template-columns:1fr; gap:0;"></div>
       </div>
 
-      <!-- Discrepancy Matrix (Ownership detail) -->
-      <div class="card card-red" id="step1-data-change" style="margin-bottom:20px;">
+      <!-- Ownership Discrepancy Detail -->
+      <div class="card" id="step1-data-change" style="margin-bottom:20px;">
         <div class="card-header">
-          <h3>&#128200; Multi-Source Discrepancy Matrix &mdash; Beneficial Ownership</h3>
-          <span class="badge badge-danger">CRITICAL</span>
-        </div>
-        <div class="alert-banner danger" style="margin-bottom:14px; font-size:12px;">
-          &#9888;&#65039; Kayla detected changes across 6 of 7 monitored categories. Beneficial Ownership is <strong>CRITICAL</strong> &mdash; 6 discrepancies with 100% ownership change. Detailed matrix below.
+          <h3>Beneficial Ownership &mdash; Field-by-Field Comparison</h3>
+          <span class="badge badge-danger">CRITICAL &mdash; 6 discrepancies</span>
         </div>
         <div style="overflow-x:auto;">
-        <table class="data-table" style="margin-bottom:12px; font-size:12px;">
+        <table class="data-table" style="font-size:12px;">
           <thead>
             <tr>
-              <th>Data Point</th>
-              <th style="background:#ebf4ff;">&#128451; On File<br><small style="font-weight:400;">(KYC Record)</small></th>
-              <th>&#128196; SEC EDGAR<br><small style="font-weight:400;">(8-K / DEF 14A)</small></th>
-              <th>&#127758; BVD / Orbis</th>
-              <th>&#128202; D&amp;B</th>
-              <th>&#127963; Corp Registry<br><small style="font-weight:400;">(Delaware)</small></th>
-              <th>Status</th>
+              <th style="width:150px;">Data Point</th>
+              <th style="width:180px;">On File (Bank Record)</th>
+              <th style="width:180px;">Verified Value</th>
+              <th>Sources &amp; Evidence</th>
+              <th style="width:80px;">Change</th>
             </tr>
           </thead>
           <tbody>
-            <tr style="background:#fff5f5;">
+            <tr>
               <td><strong>Ultimate Parent</strong></td>
-              <td style="background:#ebf4ff;"><span style="text-decoration:line-through; color:#a0aec0;">N/A (Independent)</span></td>
-              <td><strong style="color:#e53e3e;">UiPath, Inc.</strong></td>
-              <td><strong style="color:#e53e3e;">UiPath, Inc.</strong></td>
-              <td><strong style="color:#e53e3e;">UiPath, Inc.</strong></td>
-              <td><strong style="color:#e53e3e;">UiPath, Inc.</strong></td>
-              <td><span class="badge badge-danger">MISMATCH</span></td>
+              <td><span style="text-decoration:line-through; color:#a0aec0;">N/A (Independent)</span></td>
+              <td><strong style="color:#1a365d;">UiPath, Inc.</strong><br><small style="color:#718096;">NYSE: PATH</small></td>
+              <td style="font-size:11px;">
+                <a href="/mockups/sec-form-d-mockup.html" target="_blank" style="color:#2b6cb0; text-decoration:none; font-weight:600;">SEC EDGAR 8-K</a> <span style="background:#dbeafe;color:#1e40af;padding:1px 4px;border-radius:2px;font-size:8px;font-weight:600;">PRIMARY</span><br>
+                <a href="/mockups/delaware-corporate-registry-mockup.html" target="_blank" style="color:#2b6cb0; text-decoration:none;">Corp Registry</a> &bull;
+                <a href="/mockups/dun-bradstreet-mockup.html" target="_blank" style="color:#2b6cb0; text-decoration:none;">D&amp;B</a> &bull;
+                <span style="color:#a0aec0; text-decoration:line-through;"><a href="/mockups/bvd-orbis-mockup.html" target="_blank" style="color:#a0aec0;">BVD</a> (stale)</span>
+              </td>
+              <td><span style="background:#fed7d7;color:#9b2c2c;padding:2px 8px;border-radius:4px;font-size:9px;font-weight:600;">NEW</span></td>
             </tr>
-            <tr style="background:#fff5f5;">
+            <tr>
               <td><strong>Beneficial Owner #1</strong></td>
-              <td style="background:#ebf4ff;"><span style="text-decoration:line-through; color:#a0aec0;">Max Yankelevich (28.5%)</span></td>
-              <td><strong style="color:#e53e3e;">UiPath, Inc. (100%)</strong></td>
-              <td><strong style="color:#e53e3e;">UiPath, Inc. (100%)</strong></td>
-              <td><strong style="color:#e53e3e;">UiPath, Inc. (100%)</strong></td>
-              <td><strong style="color:#e53e3e;">UiPath, Inc. (100%)</strong></td>
-              <td><span class="badge badge-danger">MISMATCH</span></td>
+              <td><span style="text-decoration:line-through; color:#a0aec0;">Max Yankelevich (28.5%)</span></td>
+              <td><strong style="color:#1a365d;">UiPath, Inc. (100%)</strong></td>
+              <td style="font-size:11px;">
+                <a href="/mockups/sec-form-d-mockup.html" target="_blank" style="color:#2b6cb0; text-decoration:none; font-weight:600;">SEC EDGAR 8-K</a> <span style="background:#dbeafe;color:#1e40af;padding:1px 4px;border-radius:2px;font-size:8px;font-weight:600;">PRIMARY</span><br>
+                <a href="/mockups/dun-bradstreet-mockup.html" target="_blank" style="color:#2b6cb0; text-decoration:none;">D&amp;B</a> &bull;
+                <a href="/mockups/delaware-corporate-registry-mockup.html" target="_blank" style="color:#2b6cb0; text-decoration:none;">Corp Registry</a>
+              </td>
+              <td><span style="background:#fed7d7;color:#9b2c2c;padding:2px 8px;border-radius:4px;font-size:9px;font-weight:600;">CHANGED</span></td>
             </tr>
-            <tr style="background:#fff5f5;">
+            <tr>
               <td><strong>Significant Controller</strong></td>
-              <td style="background:#ebf4ff;"><span style="text-decoration:line-through; color:#a0aec0;">Max Yankelevich</span></td>
-              <td><strong style="color:#e53e3e;">Daniel Dines (~22% voting)</strong></td>
-              <td style="color:#a0aec0;">Not available</td>
-              <td style="color:#a0aec0;">Not available</td>
-              <td style="color:#a0aec0;">N/A</td>
-              <td><span class="badge badge-danger">MISMATCH</span></td>
+              <td><span style="text-decoration:line-through; color:#a0aec0;">Max Yankelevich</span></td>
+              <td><strong style="color:#1a365d;">Daniel Dines</strong><br><small style="color:#718096;">~22% voting (dual-class)</small></td>
+              <td style="font-size:11px;">
+                <a href="/mockups/sec-form-d-mockup.html" target="_blank" style="color:#2b6cb0; text-decoration:none; font-weight:600;">SEC DEF 14A</a> <span style="background:#dbeafe;color:#1e40af;padding:1px 4px;border-radius:2px;font-size:8px;font-weight:600;">PRIMARY</span><br>
+                <a href="/mockups/dun-bradstreet-mockup.html" target="_blank" style="color:#2b6cb0; text-decoration:none;">D&amp;B</a> (21.8%)
+              </td>
+              <td><span style="background:#fed7d7;color:#9b2c2c;padding:2px 8px;border-radius:4px;font-size:9px;font-weight:600;">CHANGED</span></td>
             </tr>
-            <tr style="background:#fff5f5;">
+            <tr style="opacity:0.7;">
               <td><strong>Beneficial Owner #2</strong></td>
-              <td style="background:#ebf4ff;"><span style="text-decoration:line-through; color:#a0aec0;">Georgian Partners (26.3%)</span></td>
-              <td style="color:#a0aec0;">Not listed</td>
-              <td><span style="color:#d69e2e;">Georgian (26.3%)</span> <span class="badge badge-warning" style="font-size:8px;">STALE</span></td>
-              <td style="color:#a0aec0;">Not listed</td>
-              <td style="color:#a0aec0;">N/A</td>
-              <td><span class="badge badge-danger">MISMATCH</span></td>
+              <td><span style="text-decoration:line-through; color:#a0aec0;">Georgian Partners (26.3%)</span></td>
+              <td><span style="color:#a0aec0;">Removed &mdash; bought out</span></td>
+              <td style="font-size:11px;">
+                <a href="/mockups/sec-form-d-mockup.html" target="_blank" style="color:#2b6cb0; text-decoration:none;">SEC EDGAR</a> &bull;
+                <a href="/mockups/dun-bradstreet-mockup.html" target="_blank" style="color:#2b6cb0; text-decoration:none;">D&amp;B</a> &bull;
+                <span style="color:#d69e2e;"><a href="/mockups/bvd-orbis-mockup.html" target="_blank" style="color:#d69e2e;">BVD</a> still shows 26.3%</span> <span style="background:#fefcbf;color:#975a16;padding:1px 4px;border-radius:2px;font-size:8px;font-weight:600;">STALE</span>
+              </td>
+              <td><span style="background:#edf2f7;color:#718096;padding:2px 8px;border-radius:4px;font-size:9px;font-weight:600;">REMOVED</span></td>
             </tr>
-            <tr style="background:#fff5f5;">
+            <tr style="opacity:0.7;">
               <td><strong>Beneficial Owner #3</strong></td>
-              <td style="background:#ebf4ff;"><span style="text-decoration:line-through; color:#a0aec0;">Insight Partners (25.7%)</span></td>
-              <td style="color:#a0aec0;">Not listed</td>
-              <td><span style="color:#d69e2e;">Insight (25.7%)</span> <span class="badge badge-warning" style="font-size:8px;">STALE</span></td>
-              <td style="color:#a0aec0;">Not listed</td>
-              <td style="color:#a0aec0;">N/A</td>
-              <td><span class="badge badge-danger">MISMATCH</span></td>
+              <td><span style="text-decoration:line-through; color:#a0aec0;">Insight Partners (25.7%)</span></td>
+              <td><span style="color:#a0aec0;">Removed &mdash; bought out</span></td>
+              <td style="font-size:11px;">
+                <a href="/mockups/sec-form-d-mockup.html" target="_blank" style="color:#2b6cb0; text-decoration:none;">SEC EDGAR</a> &bull;
+                <a href="/mockups/dun-bradstreet-mockup.html" target="_blank" style="color:#2b6cb0; text-decoration:none;">D&amp;B</a> &bull;
+                <span style="color:#d69e2e;"><a href="/mockups/bvd-orbis-mockup.html" target="_blank" style="color:#d69e2e;">BVD</a> still shows 25.7%</span> <span style="background:#fefcbf;color:#975a16;padding:1px 4px;border-radius:2px;font-size:8px;font-weight:600;">STALE</span>
+              </td>
+              <td><span style="background:#edf2f7;color:#718096;padding:2px 8px;border-radius:4px;font-size:9px;font-weight:600;">REMOVED</span></td>
             </tr>
-            <tr style="background:#fffff0;">
+            <tr>
               <td><strong>Legal Entity Type</strong></td>
-              <td style="background:#ebf4ff;">Private Corporation</td>
-              <td><strong style="color:#d69e2e;">Subsidiary of Public Co.</strong></td>
               <td>Private Corporation</td>
-              <td><strong style="color:#d69e2e;">Subsidiary</strong></td>
-              <td>Active</td>
-              <td><span class="badge badge-warning">CHANGED</span></td>
+              <td><strong style="color:#1a365d;">Subsidiary of Public Co.</strong></td>
+              <td style="font-size:11px;">
+                <a href="/mockups/sec-form-d-mockup.html" target="_blank" style="color:#2b6cb0; text-decoration:none; font-weight:600;">SEC EDGAR 8-K</a> <span style="background:#dbeafe;color:#1e40af;padding:1px 4px;border-radius:2px;font-size:8px;font-weight:600;">PRIMARY</span><br>
+                <a href="/mockups/delaware-corporate-registry-mockup.html" target="_blank" style="color:#2b6cb0; text-decoration:none;">Corp Registry</a>
+              </td>
+              <td><span style="background:#fefcbf;color:#975a16;padding:2px 8px;border-radius:4px;font-size:9px;font-weight:600;">CHANGED</span></td>
             </tr>
           </tbody>
         </table>
         </div>
 
+        <!-- Source confidence strip -->
+        <div style="padding:10px 16px; background:#f8fafc; border-top:1px solid #edf2f7; font-size:11px; display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+          <span style="font-weight:600; color:#64748b; margin-right:4px;">Sources compared:</span>
+          <a href="/mockups/sec-form-d-mockup.html" target="_blank" style="padding:2px 8px; background:#dbeafe; color:#1e40af; border-radius:3px; font-size:10px; font-weight:600; text-decoration:none;">SEC EDGAR</a>
+          <span style="color:#a0aec0;">(Regulatory &mdash; primary)</span>
+          <a href="/mockups/delaware-corporate-registry-mockup.html" target="_blank" style="padding:2px 8px; background:#f1f5f9; color:#475569; border-radius:3px; font-size:10px; font-weight:500; text-decoration:none;">Corp Registry</a>
+          <a href="/mockups/dun-bradstreet-mockup.html" target="_blank" style="padding:2px 8px; background:#f1f5f9; color:#475569; border-radius:3px; font-size:10px; font-weight:500; text-decoration:none;">D&amp;B</a>
+          <a href="/mockups/bvd-orbis-mockup.html" target="_blank" style="padding:2px 8px; background:#fffff0; color:#975a16; border-radius:3px; font-size:10px; font-weight:500; text-decoration:none; border:1px solid #fefcbf;">BVD/Orbis <small>(stale &mdash; Dec 2025)</small></a>
+          <span style="color:#a0aec0; margin-left:auto; font-size:10px;">Tier 1 regulatory sources take precedence when data conflicts arise</span>
+        </div>
       </div>
 
     </section>
