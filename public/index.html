@@ -2429,27 +2429,28 @@ body {
         </div>
       </div>
 
-      <!-- REVIEW PHASE -->
-      <div class="phase-group-header review">Review (human)</div>
       <div class="nav-item" data-step="7" onclick="scrollToStep(7)">
         <div class="nav-status" id="nav-status-7">&#9744;</div>
-        <div class="nav-label">7. Compliance Officer Approval</div>
+        <div class="nav-label">7. Screening (Evelyn + Evan)</div>
+        <div class="nav-meta">
+          <span class="nav-role-badge kayla">&#129302;</span>
+          <span class="nav-elapsed" id="nav-time-7"></span>
+        </div>
+      </div>
+
+      <!-- REVIEW PHASE -->
+      <div class="phase-group-header review">Review (human)</div>
+      <div class="nav-item" data-step="8" onclick="scrollToStep(8)">
+        <div class="nav-status" id="nav-status-8">&#9744;</div>
+        <div class="nav-label">8. Compliance Officer Review</div>
         <div class="nav-meta">
           <span class="nav-role-badge human">&#128100;</span>
-          <span class="nav-elapsed" id="nav-time-7"></span>
+          <span class="nav-elapsed" id="nav-time-8"></span>
         </div>
       </div>
 
       <!-- EXECUTION PHASE -->
       <div class="phase-group-header execution">Execution (auto)</div>
-      <div class="nav-item" data-step="8" onclick="scrollToStep(8)">
-        <div class="nav-status" id="nav-status-8">&#9744;</div>
-        <div class="nav-label">8. Screening (Evelyn + Evan)</div>
-        <div class="nav-meta">
-          <span class="nav-role-badge kayla">&#129302;</span>
-          <span class="nav-elapsed" id="nav-time-8"></span>
-        </div>
-      </div>
       <div class="nav-item" data-step="9" onclick="scrollToStep(9)">
         <div class="nav-status" id="nav-status-9">&#9744;</div>
         <div class="nav-label">9. RFI &amp; Document Collection</div>
@@ -3034,126 +3035,11 @@ body {
     </section>
 
     <!-- ============================================================
-         STEP 7: Human Review Checkpoint
+         STEP 7: Screening (before human review — analyst sees results)
          ============================================================ -->
     <section id="step-7" class="step-section">
       <div class="step-header">
         <div class="step-number">7</div>
-        <div class="step-title">
-          <h2>Compliance Officer Review</h2>
-          <div class="step-badges">
-            <span class="badge badge-human">&#128100; HUMAN REVIEW REQUIRED</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="human-review-box" style="text-align:left;">
-        <h3 style="text-align:center;">&#128100; COMPLIANCE OFFICER REVIEW REQUIRED</h3>
-        <p style="text-align:center; font-size:13px; color:#4a5568; margin-bottom:20px;">Kayla has completed all discovery and analysis. Review findings below, then decide.</p>
-
-        <!-- Review Tabs -->
-        <div class="review-tabs" id="review-tabs">
-          <button class="review-tab active" onclick="switchReviewTab('summary', this)">Summary</button>
-          <button class="review-tab" onclick="switchReviewTab('notes', this)">Notes &amp; Decision</button>
-        </div>
-
-        <!-- TAB: Summary -->
-        <div class="review-tab-panel active" id="review-panel-summary">
-          <div class="review-summary-grid">
-            <div class="review-summary-item">
-              <div class="review-item-label">Trigger Event</div>
-              <div class="review-item-value">UiPath acquisition &mdash; 20 data changes across 6 categories &#9989;</div>
-            </div>
-            <div class="review-summary-item">
-              <div class="review-item-label">Ownership (CRITICAL)</div>
-              <div class="review-item-value">100% change &mdash; 3 UBOs removed, UiPath 100% + Dines 22% added &#9989;</div>
-            </div>
-            <div class="review-summary-item">
-              <div class="review-item-label">New Parent</div>
-              <div class="review-item-value">UiPath Inc (NYSE: PATH) &mdash; $1.3B revenue, profile compiled &#9989;</div>
-            </div>
-            <div class="review-summary-item">
-              <div class="review-item-label">Governance</div>
-              <div class="review-item-value">CEO + board restructured post-acquisition &mdash; pending RFI &#9888;&#65039;</div>
-            </div>
-            <div class="review-summary-item">
-              <div class="review-item-label">Screening</div>
-              <div class="review-item-value">4 entities screened &mdash; 6 potential matches, all cleared by Evelyn &#9989;</div>
-            </div>
-            <div class="review-summary-item">
-              <div class="review-item-label">Source Discrepancy</div>
-              <div class="review-item-value">BVD/Orbis stale (Dec 2025) &mdash; assessed as data lag, deprioritized &#9989;</div>
-            </div>
-            <div class="review-summary-item">
-              <div class="review-item-label">Jurisdictions</div>
-              <div class="review-item-value">USA, UK, India + EU, Japan, Australia &mdash; 8 regulatory deadlines &#9989;</div>
-            </div>
-            <div class="review-summary-item">
-              <div class="review-item-label">Risk Assessment</div>
-              <div class="review-item-value">LOW 2.1 &rarr; LOW 1.8 (improved &mdash; NYSE parent, public company exemption) &#9989;</div>
-            </div>
-          </div>
-          <div style="margin-top:16px; font-size:12px; color:#718096; background:#f7fafc; padding:12px 16px; border-radius:8px;">
-            <strong>Kayla's Recommendation:</strong> Approve. 20 data changes validated across 19 sources. NYSE-listed parent improves risk profile. BVD/Orbis discrepancy is a known data lag (re-check in 14 days). All sanctions/PEP matches cleared as false positives. No adverse media. Governance details pending RFI &mdash; will be collected in Step 9.
-          </div>
-        </div>
-
-        <!-- TAB: Notes & Decision -->
-        <div class="review-tab-panel" id="review-panel-notes">
-          <div style="margin-bottom:16px;">
-            <label style="font-size:12px; font-weight:600; color:#4a5568; display:block; margin-bottom:6px;">Analyst Notes (optional)</label>
-            <textarea class="review-notes-area" id="review-notes" placeholder="Add any notes, observations, or conditions for this approval..."></textarea>
-          </div>
-
-          <!-- Exception / escalation paths -->
-          <div class="exception-callout">
-            <h4>&#128256; What if you need to deviate?</h4>
-            <div class="exception-path-item">
-              <span class="path-label">Screening returns a hit &#8594;</span>
-              <span>Kayla escalates to Enhanced Due Diligence (EDD). Edward AI agent takes over investigation. Case SLA extends to 60 days.</span>
-            </div>
-            <div class="exception-path-item">
-              <span class="path-label">Customer doesn't respond &#8594;</span>
-              <span>Kayla sends automated reminders at 7/14/21 days. After 28 days, case escalates to Senior Compliance with SLA breach warning.</span>
-            </div>
-            <div class="exception-path-item">
-              <span class="path-label">Discrepancy is real &#8594;</span>
-              <span>Click "Request More Information" below. Kayla generates targeted follow-up RFI and pauses execution until resolved.</span>
-            </div>
-            <div class="exception-path-item">
-              <span class="path-label">Need senior sign-off &#8594;</span>
-              <span>Click "Escalate." Case routes to Senior Compliance Officer with full Kayla package attached.</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Feedback area for non-approve actions -->
-        <div id="review-action-feedback" style="margin-top:16px;"></div>
-
-        <!-- Decision Buttons -->
-        <div class="review-decision-bar">
-          <button class="btn-reject" onclick="showReviewAction('reject')">
-            &#10060; Reject
-          </button>
-          <button class="btn-escalate" onclick="showReviewAction('escalate')">
-            &#9888;&#65039; Escalate to Senior
-          </button>
-          <button class="btn btn-warning" onclick="showReviewAction('moreinfo')">
-            &#128233; Request More Info
-          </button>
-          <button class="btn btn-success btn-lg" id="approve-btn" onclick="approveAndContinue()">
-            &#9989; Approve &amp; Continue to Execution &#8594;
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         STEP 8: Screening (moved before RFI — screen before engaging)
-         ============================================================ -->
-    <section id="step-8" class="step-section">
-      <div class="step-header">
-        <div class="step-number">8</div>
         <div class="step-title">
           <h2>Screening</h2>
           <div class="step-badges">
@@ -3192,6 +3078,117 @@ body {
       <!-- De-screening -->
       <div class="hidden" id="step9-descreening" style="padding:12px 16px; background:#f7fafc; border-radius:8px; font-size:12px; color:#718096; margin-top:16px;">
         &#128451;&#65039; <strong>De-screened:</strong> Max Yankelevich, Georgian Partners, Insight Partners &mdash; removed from monitoring (no longer beneficial owners)
+      </div>
+    </section>
+
+    <!-- ============================================================
+         STEP 8: Human Review (after screening — analyst has full picture)
+         ============================================================ -->
+    <section id="step-8" class="step-section">
+      <div class="step-header">
+        <div class="step-number">8</div>
+        <div class="step-title">
+          <h2>Compliance Officer Review</h2>
+          <div class="step-badges">
+            <span class="badge badge-human">&#128100; HUMAN REVIEW REQUIRED</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="human-review-box" style="text-align:left;">
+        <h3 style="text-align:center;">&#128100; COMPLIANCE OFFICER REVIEW REQUIRED</h3>
+        <p style="text-align:center; font-size:13px; color:#4a5568; margin-bottom:20px;">Kayla has completed all discovery, screening, and analysis. Review findings below, then decide.</p>
+
+        <!-- Review Tabs -->
+        <div class="review-tabs" id="review-tabs">
+          <button class="review-tab active" onclick="switchReviewTab('summary', this)">Summary</button>
+          <button class="review-tab" onclick="switchReviewTab('notes', this)">Notes &amp; Decision</button>
+        </div>
+
+        <!-- TAB: Summary -->
+        <div class="review-tab-panel active" id="review-panel-summary">
+          <div class="review-summary-grid">
+            <div class="review-summary-item">
+              <div class="review-item-label">Trigger Event</div>
+              <div class="review-item-value">UiPath acquisition &mdash; 20 data changes across 6 categories &#9989;</div>
+            </div>
+            <div class="review-summary-item">
+              <div class="review-item-label">Ownership (CRITICAL)</div>
+              <div class="review-item-value">100% change &mdash; 3 UBOs removed, UiPath 100% + Dines 22% added &#9989;</div>
+            </div>
+            <div class="review-summary-item">
+              <div class="review-item-label">New Parent</div>
+              <div class="review-item-value">UiPath Inc (NYSE: PATH) &mdash; $1.3B revenue, profile compiled &#9989;</div>
+            </div>
+            <div class="review-summary-item">
+              <div class="review-item-label">Governance</div>
+              <div class="review-item-value">CEO + board restructured post-acquisition &mdash; pending RFI &#9888;&#65039;</div>
+            </div>
+            <div class="review-summary-item">
+              <div class="review-item-label">Screening (Step 7)</div>
+              <div class="review-item-value">4 entities screened &mdash; 6 potential matches, all cleared by Evelyn. No adverse media. &#9989;</div>
+            </div>
+            <div class="review-summary-item">
+              <div class="review-item-label">Source Discrepancy</div>
+              <div class="review-item-value">BVD/Orbis stale (Dec 2025) &mdash; assessed as data lag, deprioritized &#9989;</div>
+            </div>
+            <div class="review-summary-item">
+              <div class="review-item-label">Jurisdictions</div>
+              <div class="review-item-value">USA, UK, India + EU, Japan, Australia &mdash; 8 regulatory deadlines &#9989;</div>
+            </div>
+            <div class="review-summary-item">
+              <div class="review-item-label">Risk Assessment</div>
+              <div class="review-item-value">LOW 2.1 &rarr; LOW 1.8 (improved &mdash; NYSE parent, public company exemption) &#9989;</div>
+            </div>
+          </div>
+          <div style="margin-top:16px; font-size:12px; color:#718096; background:#f7fafc; padding:12px 16px; border-radius:8px;">
+            <strong>Kayla's Recommendation:</strong> Approve. 20 data changes validated across 19 sources. NYSE-listed parent improves risk profile. BVD/Orbis discrepancy is a known data lag (re-check in 14 days). All sanctions/PEP matches cleared as false positives by Evelyn. No adverse media per Evan. Governance details pending RFI.
+          </div>
+        </div>
+
+        <!-- TAB: Notes & Decision -->
+        <div class="review-tab-panel" id="review-panel-notes">
+          <div style="margin-bottom:16px;">
+            <label style="font-size:12px; font-weight:600; color:#4a5568; display:block; margin-bottom:6px;">Analyst Notes (optional)</label>
+            <textarea class="review-notes-area" id="review-notes" placeholder="Add any notes, observations, or conditions for this approval..."></textarea>
+          </div>
+
+          <!-- Exception / escalation paths -->
+          <div class="exception-callout">
+            <h4>&#128256; What if you need to deviate?</h4>
+            <div class="exception-path-item">
+              <span class="path-label">Customer doesn't respond to RFI &#8594;</span>
+              <span>Kayla sends automated reminders at 7/14/21 days. After 28 days, case escalates to Senior Compliance with SLA breach warning.</span>
+            </div>
+            <div class="exception-path-item">
+              <span class="path-label">Discrepancy is real &#8594;</span>
+              <span>Click "Request More Information" below. Kayla generates targeted follow-up RFI and pauses execution until resolved.</span>
+            </div>
+            <div class="exception-path-item">
+              <span class="path-label">Need senior sign-off &#8594;</span>
+              <span>Click "Escalate." Case routes to Senior Compliance Officer with full Kayla package attached.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feedback area for non-approve actions -->
+        <div id="review-action-feedback" style="margin-top:16px;"></div>
+
+        <!-- Decision Buttons -->
+        <div class="review-decision-bar">
+          <button class="btn-reject" onclick="showReviewAction('reject')">
+            &#10060; Reject
+          </button>
+          <button class="btn-escalate" onclick="showReviewAction('escalate')">
+            &#9888;&#65039; Escalate to Senior
+          </button>
+          <button class="btn btn-warning" onclick="showReviewAction('moreinfo')">
+            &#128233; Request More Info
+          </button>
+          <button class="btn btn-success btn-lg" id="approve-btn" onclick="approveAndContinue()">
+            &#9989; Approve &amp; Continue to Execution &#8594;
+          </button>
+        </div>
       </div>
     </section>
 
@@ -4038,37 +4035,37 @@ async function runDiscovery() {
   await sleep(1500);
   await step6_crossJurisdictional();
   await sleep(1000);
+  await step7_screening();
+  await sleep(1000);
   state.discoveryEndTime = performance.now();
   showHumanReview();
 }
 
 function showHumanReview() {
   state.phase = 'review';
-  beginStep(7, 'Compliance Officer Approval');
+  beginStep(8, 'Compliance Officer Review');
   updateCLMStage('diligence', 'complete', formatElapsed());
   updateCLMStage('review', 'active');
 
-  // Make step 7 pulse in sidebar
-  const navItem = $(`.nav-item[data-step="7"]`);
+  // Make step 8 pulse in sidebar
+  const navItem = $(`.nav-item[data-step="8"]`);
   if (navItem) navItem.classList.add('needs-review');
 
   const discoverySeconds = Math.round((state.discoveryEndTime - state.totalStartTime) / 1000);
   addCLMAction('\u23f8 PEGA Review stage \u2014 awaiting compliance officer approval');
-  updateActivityStrip(`AWAITING HUMAN REVIEW -- Kayla completed due diligence in ${discoverySeconds} seconds`);
+  updateActivityStrip(`AWAITING HUMAN REVIEW -- Kayla completed discovery + screening in ${discoverySeconds} seconds`);
 }
 
 function approveAndContinue() {
-  completeStep(7);
+  completeStep(8);
   updateCLMStage('review', 'complete', formatElapsed());
   updateCLMStage('decide', 'active');
-  addCLMAction('Compliance officer approved \u2014 proceeding to Decide stage');
+  addCLMAction('Compliance officer approved \u2014 proceeding to execution');
   state.phase = 'execution';
   runExecution();
 }
 
 async function runExecution() {
-  await step8_screening();
-  await sleep(1000);
   await step9_rfiDocuments();
   await sleep(1000);
   await step10_riskReassessment();
@@ -5821,8 +5818,8 @@ function previewFiling(filingId) {
 /* =============================================================
    STEP 8: Screening (before RFI — screen before engaging)
    ============================================================= */
-async function step8_screening() {
-  beginStep(8, 'Screening (Evelyn + Evan)');
+async function step7_screening() {
+  beginStep(7, 'Screening (Evelyn + Evan)');
   addCLMAction('Screening 4 entities via Evelyn (sanctions) + Evan (media)');
 
   const container = $('#step9-screening-results');
@@ -5893,7 +5890,7 @@ async function step8_screening() {
 
   show('#step9-descreening');
   addCLMAction('All entities cleared \u2014 ' + Object.values(screeningData).reduce(function(s,e){return s+e.sanctions.length;},0) + ' potential matches reviewed by Evelyn, all false positives');
-  completeStep(8);
+  completeStep(7);
 }
 
 /* =============================================================
