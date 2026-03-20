@@ -3090,104 +3090,105 @@ body {
         <div class="step-title">
           <h2>Compliance Officer Review</h2>
           <div class="step-badges">
-            <span class="badge badge-human">&#128100; HUMAN REVIEW REQUIRED</span>
+            <span class="badge badge-human">&#128100; HUMAN REVIEW</span>
           </div>
         </div>
       </div>
 
-      <div class="human-review-box" style="text-align:left;">
-        <h3 style="text-align:center;">&#128100; COMPLIANCE OFFICER REVIEW REQUIRED</h3>
-        <p style="text-align:center; font-size:13px; color:#4a5568; margin-bottom:20px;">Kayla has completed all discovery, screening, and analysis. Review findings below, then decide.</p>
-
-        <!-- Review Tabs -->
-        <div class="review-tabs" id="review-tabs">
-          <button class="review-tab active" onclick="switchReviewTab('summary', this)">Summary</button>
-          <button class="review-tab" onclick="switchReviewTab('notes', this)">Notes &amp; Decision</button>
+      <!-- Case header bar -->
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 16px; background:linear-gradient(135deg,#0f172a,#1e3a5f); border-radius:8px; margin-bottom:16px; color:#fff;">
+        <div style="display:flex; align-items:center; gap:16px;">
+          <div><span style="font-size:10px; opacity:0.5;">CASE</span><br><strong style="font-size:14px;">PKYC-WF-2026-ACQ</strong></div>
+          <div style="width:1px; height:28px; background:rgba(255,255,255,0.15);"></div>
+          <div><span style="font-size:10px; opacity:0.5;">ENTITY</span><br><span style="font-size:12px;">WorkFusion, Inc.</span></div>
+          <div style="width:1px; height:28px; background:rgba(255,255,255,0.15);"></div>
+          <div><span style="font-size:10px; opacity:0.5;">EVENT</span><br><span style="font-size:12px;">Acquisition by UiPath, Inc.</span></div>
         </div>
-
-        <!-- TAB: Summary -->
-        <div class="review-tab-panel active" id="review-panel-summary">
-          <div class="review-summary-grid">
-            <div class="review-summary-item">
-              <div class="review-item-label">Trigger Event</div>
-              <div class="review-item-value">UiPath acquisition &mdash; 20 data changes across 6 categories &#9989;</div>
-            </div>
-            <div class="review-summary-item">
-              <div class="review-item-label">Ownership (CRITICAL)</div>
-              <div class="review-item-value">100% change &mdash; 3 UBOs removed, UiPath 100% + Dines 22% added &#9989;</div>
-            </div>
-            <div class="review-summary-item">
-              <div class="review-item-label">New Parent</div>
-              <div class="review-item-value">UiPath Inc (NYSE: PATH) &mdash; $1.3B revenue, profile compiled &#9989;</div>
-            </div>
-            <div class="review-summary-item">
-              <div class="review-item-label">Governance</div>
-              <div class="review-item-value">CEO + board restructured post-acquisition &mdash; pending RFI &#9888;&#65039;</div>
-            </div>
-            <div class="review-summary-item">
-              <div class="review-item-label">Screening (Step 7)</div>
-              <div class="review-item-value">4 entities screened &mdash; 6 potential matches, all cleared by Evelyn. No adverse media. &#9989;</div>
-            </div>
-            <div class="review-summary-item">
-              <div class="review-item-label">Source Discrepancy</div>
-              <div class="review-item-value">BVD/Orbis stale (Dec 2025) &mdash; assessed as data lag, deprioritized &#9989;</div>
-            </div>
-            <div class="review-summary-item">
-              <div class="review-item-label">Jurisdictions</div>
-              <div class="review-item-value">USA, UK, India + EU, Japan, Australia &mdash; 8 regulatory deadlines &#9989;</div>
-            </div>
-            <div class="review-summary-item">
-              <div class="review-item-label">Risk Assessment</div>
-              <div class="review-item-value">LOW 2.1 &rarr; LOW 1.8 (improved &mdash; NYSE parent, public company exemption) &#9989;</div>
-            </div>
-          </div>
-          <div style="margin-top:16px; font-size:12px; color:#718096; background:#f7fafc; padding:12px 16px; border-radius:8px;">
-            <strong>Kayla's Recommendation:</strong> Approve. 20 data changes validated across 19 sources. NYSE-listed parent improves risk profile. BVD/Orbis discrepancy is a known data lag (re-check in 14 days). All sanctions/PEP matches cleared as false positives by Evelyn. No adverse media per Evan. Governance details pending RFI.
-          </div>
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div style="background:rgba(239,68,68,0.2); color:#fca5a5; padding:3px 10px; border-radius:4px; font-size:10px; font-weight:700;">CRITICAL</div>
+          <div><span style="font-size:10px; opacity:0.5;">SLA</span><br><span style="font-size:12px; font-weight:600;">28 days remaining</span></div>
+          <div style="background:rgba(251,191,36,0.2); color:#fcd34d; padding:3px 10px; border-radius:4px; font-size:10px; font-weight:700;">PENDING REVIEW</div>
         </div>
+      </div>
 
-        <!-- TAB: Notes & Decision -->
-        <div class="review-tab-panel" id="review-panel-notes">
-          <div style="margin-bottom:16px;">
-            <label style="font-size:12px; font-weight:600; color:#4a5568; display:block; margin-bottom:6px;">Analyst Notes (optional)</label>
-            <textarea class="review-notes-area" id="review-notes" placeholder="Add any notes, observations, or conditions for this approval..."></textarea>
-          </div>
+      <!-- Findings table -->
+      <div class="card" style="margin-bottom:16px;">
+        <div class="card-header">
+          <h3>Kayla's Findings &mdash; Summary</h3>
+          <span style="font-size:10px; color:#a0aec0;">Steps 1&ndash;7 completed automatically</span>
+        </div>
+        <table class="data-table" style="font-size:12px;">
+          <thead>
+            <tr><th>Area</th><th>Finding</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff5f5;">
+              <td><strong>Ownership</strong></td>
+              <td>100% change &mdash; 3 UBOs removed. UiPath, Inc. now sole owner. Daniel Dines identified as control person (~22% voting).</td>
+              <td><span style="background:#fed7d7;color:#9b2c2c;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:600;">CRITICAL</span></td>
+            </tr>
+            <tr>
+              <td><strong>New Parent</strong></td>
+              <td>UiPath, Inc. (NYSE: PATH) &mdash; CIK 0001734722 &mdash; $1.3B revenue, 4,200 employees, Delaware incorporated.</td>
+              <td><span style="background:#c6f6d5;color:#276749;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:600;">PROFILED</span></td>
+            </tr>
+            <tr>
+              <td><strong>UBO Resolution</strong></td>
+              <td>Reconciled across 5 sources. 4/5 confirm UiPath 100%. BVD/Orbis stale (Dec 2025) &mdash; deprioritized, re-check in 14 days.</td>
+              <td><span style="background:#c6f6d5;color:#276749;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:600;">RECONCILED</span></td>
+            </tr>
+            <tr>
+              <td><strong>Screening</strong></td>
+              <td>4 entities screened. 6 potential sanctions/PEP matches &mdash; all cleared as false positives by Evelyn. No adverse media per Evan.</td>
+              <td><span style="background:#c6f6d5;color:#276749;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:600;">CLEAR</span></td>
+            </tr>
+            <tr>
+              <td><strong>Governance</strong></td>
+              <td>CEO + board restructured post-acquisition. New officer details pending RFI from UiPath.</td>
+              <td><span style="background:#fefcbf;color:#975a16;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:600;">PENDING</span></td>
+            </tr>
+            <tr>
+              <td><strong>Jurisdictions</strong></td>
+              <td>6 jurisdictions impacted (USA, UK, India, EU, Japan, Australia). 8 regulatory deadlines identified. Document matrix prepared.</td>
+              <td><span style="background:#c6f6d5;color:#276749;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:600;">MAPPED</span></td>
+            </tr>
+            <tr>
+              <td><strong>Risk</strong></td>
+              <td>Overall risk improves: 2.1 &rarr; 1.8 (LOW). NYSE-listed parent enhances transparency. 90-day change-of-control monitoring flagged.</td>
+              <td><span style="background:#c6f6d5;color:#276749;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:600;">LOW</span></td>
+            </tr>
+            <tr>
+              <td><strong>Data Changes</strong></td>
+              <td>20 fields changed across 6 of 7 monitored categories. All validated against source-of-truth hierarchy.</td>
+              <td><span style="background:#dbeafe;color:#1e40af;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:600;">VALIDATED</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="padding:10px 16px; background:#f7fafc; border-top:1px solid #edf2f7; font-size:11px; color:#94a3b8; display:flex; justify-content:space-between;">
+          <span>AI assessment: No escalation triggers identified. Approve recommended.</span>
+          <span>19 sources queried &bull; 7 steps completed in <span id="review-discovery-time">--</span>s</span>
+        </div>
+      </div>
 
-          <!-- Exception / escalation paths -->
-          <div class="exception-callout">
-            <h4>&#128256; What if you need to deviate?</h4>
-            <div class="exception-path-item">
-              <span class="path-label">Customer doesn't respond to RFI &#8594;</span>
-              <span>Kayla sends automated reminders at 7/14/21 days. After 28 days, case escalates to Senior Compliance with SLA breach warning.</span>
-            </div>
-            <div class="exception-path-item">
-              <span class="path-label">Discrepancy is real &#8594;</span>
-              <span>Click "Request More Information" below. Kayla generates targeted follow-up RFI and pauses execution until resolved.</span>
-            </div>
-            <div class="exception-path-item">
-              <span class="path-label">Need senior sign-off &#8594;</span>
-              <span>Click "Escalate." Case routes to Senior Compliance Officer with full Kayla package attached.</span>
-            </div>
-          </div>
+      <!-- Analyst decision -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Analyst Decision</h3>
+        </div>
+        <div style="padding:12px 16px;">
+          <label style="font-size:11px; font-weight:600; color:#4a5568; display:block; margin-bottom:6px;">Notes (optional)</label>
+          <textarea id="review-notes" placeholder="Add observations, conditions, or rationale for your decision..." style="width:100%; min-height:60px; padding:10px 12px; border:1px solid #e2e8f0; border-radius:6px; font-size:12px; font-family:inherit; resize:vertical; color:#334155;"></textarea>
         </div>
 
         <!-- Feedback area for non-approve actions -->
-        <div id="review-action-feedback" style="margin-top:16px;"></div>
+        <div id="review-action-feedback" style="padding:0 16px;"></div>
 
-        <!-- Decision Buttons -->
-        <div class="review-decision-bar">
-          <button class="btn-reject" onclick="showReviewAction('reject')">
-            &#10060; Reject
-          </button>
-          <button class="btn-escalate" onclick="showReviewAction('escalate')">
-            &#9888;&#65039; Escalate to Senior
-          </button>
-          <button class="btn btn-warning" onclick="showReviewAction('moreinfo')">
-            &#128233; Request More Info
-          </button>
-          <button class="btn btn-success btn-lg" id="approve-btn" onclick="approveAndContinue()">
-            &#9989; Approve &amp; Continue to Execution &#8594;
-          </button>
+        <div style="display:flex; align-items:center; gap:8px; padding:12px 16px; border-top:1px solid #edf2f7;">
+          <button onclick="showReviewAction('reject')" style="padding:8px 16px; border:1px solid #fed7d7; background:#fff; color:#e53e3e; border-radius:6px; font-size:11px; font-weight:600; cursor:pointer;">Reject</button>
+          <button onclick="showReviewAction('escalate')" style="padding:8px 16px; border:1px solid #fefcbf; background:#fff; color:#d69e2e; border-radius:6px; font-size:11px; font-weight:600; cursor:pointer;">Escalate</button>
+          <button onclick="showReviewAction('moreinfo')" style="padding:8px 16px; border:1px solid #e2e8f0; background:#fff; color:#4a5568; border-radius:6px; font-size:11px; font-weight:600; cursor:pointer;">Request More Info</button>
+          <div style="flex:1;"></div>
+          <button id="approve-btn" onclick="approveAndContinue()" style="padding:10px 28px; border:none; background:linear-gradient(135deg,#16a34a,#22c55e); color:#fff; border-radius:6px; font-size:13px; font-weight:700; cursor:pointer; box-shadow:0 2px 8px rgba(22,163,74,0.3);">Approve &amp; Continue &#8594;</button>
         </div>
       </div>
     </section>
@@ -4052,6 +4053,8 @@ function showHumanReview() {
   if (navItem) navItem.classList.add('needs-review');
 
   const discoverySeconds = Math.round((state.discoveryEndTime - state.totalStartTime) / 1000);
+  const rdtEl = document.getElementById('review-discovery-time');
+  if (rdtEl) rdtEl.textContent = discoverySeconds;
   addCLMAction('\u23f8 PEGA Review stage \u2014 awaiting compliance officer approval');
   updateActivityStrip(`AWAITING HUMAN REVIEW -- Kayla completed discovery + screening in ${discoverySeconds} seconds`);
 }
