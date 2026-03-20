@@ -3537,37 +3537,6 @@ body {
         </div>
       </div>
 
-      <!-- Completion Card -->
-      <div class="completion-card hidden" id="completion-card">
-        <h3>&#9989; pKYC Review Complete &mdash; Case PKYC-WF-2026-ACQ</h3>
-        <p style="color:#4a5568; font-size:15px; margin-bottom:4px;">WorkFusion / UiPath Acquisition &mdash; All steps completed</p>
-        <div class="completion-stats">
-          <div class="completion-stat">
-            <div class="completion-stat-value">10</div>
-            <div class="completion-stat-label">Steps Automated</div>
-          </div>
-          <div class="completion-stat">
-            <div class="completion-stat-value" style="color:#d69e2e;">1</div>
-            <div class="completion-stat-label">Human Approval</div>
-          </div>
-          <div class="completion-stat">
-            <div class="completion-stat-value" id="final-sources"></div>
-            <div class="completion-stat-label">Sources Queried</div>
-          </div>
-          <div class="completion-stat">
-            <div class="completion-stat-value" style="color:#38a169;">15</div>
-            <div class="completion-stat-label">Documents Collected</div>
-          </div>
-          <div class="completion-stat">
-            <div class="completion-stat-value" id="final-fields-updated"></div>
-            <div class="completion-stat-label">Fields Updated</div>
-          </div>
-          <div class="completion-stat">
-            <div class="completion-stat-value" id="final-discovery-time">--</div>
-            <div class="completion-stat-label">Discovery Time</div>
-          </div>
-        </div>
-      </div>
     </section>
 
   </main>
@@ -6140,20 +6109,7 @@ async function step11_systemUpdates() {
   updateCLMStage('decide', 'complete', formatElapsed());
   addCLMAction('\u2713 Case PKYC-WF-2026-ACQ approved \u2014 8 systems updated');
 
-  // Completion
-  show('#completion-card');
-
   const totalTime = Math.round((performance.now() - state.totalStartTime) / 1000);
-  const discoveryTime = Math.round((state.discoveryEndTime - state.totalStartTime) / 1000);
-  const finalDiscovery = $('#final-discovery-time');
-  if (finalDiscovery) finalDiscovery.textContent = discoveryTime + 's';
-
-  // Dynamic counts from config and KYC changes
-  const finalSources = $('#final-sources');
-  if (finalSources) finalSources.textContent = cfgSources.length;
-  const finalFields = $('#final-fields-updated');
-  const changeRows = document.querySelectorAll('#kyc-changes-body tr');
-  if (finalFields) finalFields.textContent = changeRows.length;
 
   state.phase = 'complete';
   state.kaylaSteps = 10;
