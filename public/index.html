@@ -2172,7 +2172,7 @@ body {
      ============================================================ -->
 <div class="workbench-overlay" id="workbench-overlay">
   <div class="workbench-header">
-    <h1><span style="font-size:20px;">&#128279;</span> PEGA <span style="font-size:12px; opacity:0.7; font-weight:400; letter-spacing:0.5px;">| Client Lifecycle Management</span></h1>
+    <h1><span style="font-size:20px;">&#128279;</span> Fenergo <span style="font-size:12px; opacity:0.7; font-weight:400; letter-spacing:0.5px;">| Client Lifecycle Management</span></h1>
     <div style="display:flex; align-items:center; gap:16px;">
       <div style="font-size:11px; opacity:0.7; background:rgba(255,255,255,0.1); padding:4px 10px; border-radius:12px;">&#129302; Kayla AI enabled</div>
       <div class="wb-user">
@@ -3055,7 +3055,7 @@ body {
         </div>
         <div style="padding:10px 20px; background:#f7fafc; border-top:1px solid #edf2f7; font-size:11px; color:#718096; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;">
           <span><strong>28 documents required</strong> &nbsp;&boxv;&nbsp; <span style="color:#2b6cb0;">10 auto-obtainable</span> &nbsp;&boxv;&nbsp; <span style="color:#d69e2e;">18 via RFI</span></span>
-          <span>Configured in PEGA Document Manager &bull; Mapped to 30+ regulations across 6 jurisdictions</span>
+          <span>Configured in Fenergo Document Manager &bull; Mapped to 30+ regulations across 6 jurisdictions</span>
         </div>
       </div>
 
@@ -3382,7 +3382,7 @@ body {
           </div>
           <div class="pipeline-node" data-sys="1">
             <div class="pipeline-node-icon">&#128218;</div>
-            <div class="pipeline-node-label">PEGA</div>
+            <div class="pipeline-node-label">Fenergo</div>
           </div>
           <div class="pipeline-node" data-sys="2">
             <div class="pipeline-node-icon">&#9729;&#65039;</div>
@@ -3406,7 +3406,7 @@ body {
           </div>
           <div class="pipeline-node" data-sys="7">
             <div class="pipeline-node-icon">&#9881;&#65039;</div>
-            <div class="pipeline-node-label">PEGA</div>
+            <div class="pipeline-node-label">Fenergo</div>
           </div>
         </div>
       </div>
@@ -3587,11 +3587,11 @@ body {
      FENERGO CLM DRAWER (right-side slide-out)
      ============================================================ -->
 <div class="clm-drawer-tab" id="clm-drawer-tab" onclick="toggleCLMDrawer()">
-  <span class="tab-dot"></span> PEGA CLM
+  <span class="tab-dot"></span> Fenergo CLM
 </div>
 <div class="clm-drawer" id="clm-drawer">
   <div class="clm-panel-header">
-    <h3>&#128279; PEGA CLM</h3>
+    <h3>&#128279; Fenergo CLM</h3>
     <button onclick="toggleCLMDrawer()" style="background:rgba(255,255,255,0.15); border:none; color:#fff; border-radius:50%; width:24px; height:24px; cursor:pointer; font-size:14px;">&times;</button>
   </div>
   <div class="clm-panel-body">
@@ -4008,7 +4008,7 @@ async function startDemo() {
   hide('#start-area');
   updateActivityStrip('Starting pKYC monitoring scan...');
 
-  // Open CLM drawer to show PEGA updating
+  // Open CLM drawer to show Fenergo updating
   const drawer = document.getElementById('clm-drawer');
   const tab = document.getElementById('clm-drawer-tab');
   if (!drawer.classList.contains('open')) {
@@ -4051,7 +4051,7 @@ function showHumanReview() {
   const discoverySeconds = Math.round((state.discoveryEndTime - state.totalStartTime) / 1000);
   const rdtEl = document.getElementById('review-discovery-time');
   if (rdtEl) rdtEl.textContent = discoverySeconds;
-  addCLMAction('\u23f8 PEGA Review stage \u2014 awaiting compliance officer approval');
+  addCLMAction('\u23f8 Fenergo Review stage \u2014 awaiting compliance officer approval');
   updateActivityStrip(`AWAITING HUMAN REVIEW -- Kayla completed discovery + screening in ${discoverySeconds} seconds`);
 }
 
@@ -5910,13 +5910,13 @@ async function step11_systemUpdates() {
 
   const systems = [
     { name: 'Temenos T24', record: 'Customer Master', fields: '<span style="color:#a0aec0;text-decoration:line-through;">N/A</span> &rarr; <strong>UiPath, Inc.</strong> (Parent) | <span style="color:#a0aec0;text-decoration:line-through;">Yankelevich 28.5%</span> &rarr; <strong>UiPath 100%</strong> (UBO) | Risk: <span style="color:#a0aec0;text-decoration:line-through;">2.1</span> &rarr; <strong>1.8</strong>' },
-    { name: 'PEGA', record: 'KYC Case', fields: 'Entity type: <span style="color:#a0aec0;text-decoration:line-through;">Private Corp</span> &rarr; <strong>Subsidiary of Public Co.</strong> | 15 documents linked | Screening: 4 entities cleared | Risk score updated' },
+    { name: 'Fenergo', record: 'KYC Case', fields: 'Entity type: <span style="color:#a0aec0;text-decoration:line-through;">Private Corp</span> &rarr; <strong>Subsidiary of Public Co.</strong> | 15 documents linked | Screening: 4 entities cleared | Risk score updated' },
     { name: 'Salesforce', record: 'Account', fields: 'Parent account: <span style="color:#a0aec0;text-decoration:line-through;">None</span> &rarr; <strong>UiPath, Inc.</strong> | Primary contact: <span style="color:#a0aec0;text-decoration:line-through;">Max Yankelevich</span> &rarr; <strong>TBD (pending RFI)</strong>' },
     { name: 'Actimize', record: 'Transaction Monitoring', fields: 'Risk profile: <span style="color:#a0aec0;text-decoration:line-through;">LOW (independent)</span> &rarr; <strong>LOW (NYSE subsidiary)</strong> | Monitoring rules updated for parent-entity flows' },
     { name: 'Fircosoft', record: 'Screening Profile', fields: 'Added: <strong>UiPath, Inc.</strong>, <strong>Daniel Dines</strong>, <strong>Ashim Gupta</strong> | Removed: Yankelevich, Georgian, Insight' },
     { name: 'SharePoint', record: 'Document Repository', fields: '15 documents uploaded (8 auto + 7 RFI) | Case folder PKYC-WF-2026-ACQ created' },
     { name: 'Actimize SAM', record: 'Suspicious Activity', fields: 'Baseline recalculated for post-acquisition transaction patterns | 90-day enhanced monitoring flagged' },
-    { name: 'PEGA', record: 'Case Management', fields: 'Status: <span style="color:#a0aec0;text-decoration:line-through;">Pending</span> &rarr; <strong>Approved</strong> | SLA: 28 days remaining | 9 regulatory filings tracked' }
+    { name: 'Fenergo', record: 'Case Management', fields: 'Status: <span style="color:#a0aec0;text-decoration:line-through;">Pending</span> &rarr; <strong>Approved</strong> | SLA: 28 days remaining | 9 regulatory filings tracked' }
   ];
 
   const tbody = $('#system-update-rows');
@@ -6179,7 +6179,7 @@ let cfgRules = [
 ];
 
 let cfgIntegrations = [
-  { id:1, name:'PEGA CLM', desc:'Case management & workflow orchestration', type:'REST API', status:'green', writes:'Case status, workflow stages, action log, SLA tracking', lastWrite:'3 min ago' },
+  { id:1, name:'Fenergo CLM', desc:'Case management & workflow orchestration', type:'REST API', status:'green', writes:'Case status, workflow stages, action log, SLA tracking', lastWrite:'3 min ago' },
   { id:2, name:'Temenos T24', desc:'Core banking — customer master records', type:'REST API', status:'green', writes:'Parent entity, UBO, ownership chain, risk rating', lastWrite:'1 hr ago' },
   { id:3, name:'Salesforce', desc:'CRM — account & relationship management', type:'REST API', status:'green', writes:'Parent account, ownership, contacts', lastWrite:'2 hrs ago' },
   { id:4, name:'Actimize', desc:'Transaction monitoring & SAR filing', type:'REST API', status:'green', writes:'Customer risk profile, monitoring rules, baseline', lastWrite:'4 hrs ago' },
@@ -6707,7 +6707,7 @@ function switchReviewTab(tabId, el) {
    ============================================================= */
 function showReviewAction(action) {
   const messages = {
-    reject: 'Case rejected and returned to queue. Kayla will notify all stakeholders and record rejection rationale in PEGA audit trail.',
+    reject: 'Case rejected and returned to queue. Kayla will notify all stakeholders and record rejection rationale in Fenergo audit trail.',
     escalate: 'Case escalated to Senior Compliance Officer (James Morrison) with full Kayla analysis package. SLA paused pending senior review.',
     moreinfo: 'Kayla generating targeted follow-up RFI based on analyst notes. Execution paused until customer responds. Automated reminders scheduled.'
   };
